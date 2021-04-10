@@ -1,0 +1,14 @@
+
+#Header {
+    color:transparent;
+    text-align: center;
+    background-color: crimson;
+}
+
+#Navigation {
+    color: ghostwhite;
+    background-color: black;
+}
+body {
+    background-image:image("./media/bg.png");
+}
