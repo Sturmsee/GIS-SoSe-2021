@@ -10,5 +10,5 @@
     background-color: black;
 }
 body {
-    background-image:image("./media/bg.png");
+    background-image: url("./media/bg.png");
 }
