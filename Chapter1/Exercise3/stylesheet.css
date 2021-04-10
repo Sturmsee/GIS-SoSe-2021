@@ -7,8 +7,7 @@
 
 #Works {
     color:rosybrown;
-    border-left-style: groove;
-    border-right-style: groove;
+    border-style: groove;
     border-top-style: none;
     border-bottom-style: dotted;
     border-color:slategrey;
