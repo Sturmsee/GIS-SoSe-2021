@@ -4,7 +4,6 @@
     text-align: center;
     background-color: crimson;
 }
-
 #Works {
     color:rosybrown;
     border-style: groove;
@@ -17,6 +16,12 @@
     color: ghostwhite;
     background-color: black;
 }
+#Survey {
+    color:black;
+    background-color: lightslategray;
+    border-left: 5px double darkgreen;
+}
+
 body {
     background-image: url("./media/bg.png");
 }
