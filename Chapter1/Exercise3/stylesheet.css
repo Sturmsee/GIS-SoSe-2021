@@ -16,7 +16,8 @@
 }
 body {
     background-image: url("./media/bg.png");
-    font-family: sans-serif;
+    font-family: Verdana, sans-serif;
+    font-size: 100%;
 }
 #Links {
     background-color:black;
@@ -25,5 +26,8 @@ body {
     border-color:darkgreen;
     border-radius:4px;
     margin:auto; 
-    vertical-align: top;
+    text-decoration: underline;
+    list-style-type:none;
+    margin:0;
+    padding:0;
 }
