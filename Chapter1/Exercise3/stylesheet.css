@@ -1,25 +1,18 @@
 
-.ListItem li{
+li a{
     display: inline;
     background-color: lightslategrey;
     color: darkgreen
 }
-a{
-    color: darkgreen 
-}
-a:hover{
+li a:hover{
     background-color: limegreen;
     color: black;    
-}
-.ListItem li:hover {
-    background-color: limegreen;
-    color: black;
 }
 #Links {
     background-color: lightslategrey;
     border-style: solid;
     border-width: thin;
-    border-radius:1rem;
+    border-radius:1px;
     border-color:green;
     position: fixed;
     list-style-type: none;
