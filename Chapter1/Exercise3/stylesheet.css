@@ -18,13 +18,14 @@ li a:hover{
     list-style-type: none;
     margin:0px;
     padding:0px;
-
     right:0;
+    display: inline;;
 }
 #Header {
     background-color: green;
     color:whitesmoke;
     font-size: 120%;
+    margin:auto;
 }
 body {
     background-image: url("./media/bg.png");
