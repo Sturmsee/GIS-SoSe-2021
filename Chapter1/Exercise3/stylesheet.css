@@ -25,4 +25,5 @@ body {
     border-color:darkgreen;
     border-radius:4px;
     margin:auto; 
+    vertical-align: top;
 }
