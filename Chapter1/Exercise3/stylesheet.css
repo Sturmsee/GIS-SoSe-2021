@@ -1,43 +1,28 @@
 
-#Header {
-    color:black;
-    font-style: oblique;
-    text-align: center;
-    background-color: green;
+.ListItem a{
+    display: inline;
+    background-color: lightslategrey;
+    color: darkgreen
 }
-#Navigation {
+.ListItem a:hover {
+    background-color: limegreen;
     color: black;
 }
-.Blocks {
-    color:black;
-    background-color: lightslategray;
-    border-left: 5px double darkgreen;
+#Links {
+    background-color: lightslategrey;
+    border-style: solid;
+    border-width: thin;
+    border-radius:1rem;
+    border-color:green;
+}
+#Header {
+    background-color: green;
+    color:whitesmoke;
+    font-size: 120%;
 }
 body {
     background-image: url("./media/bg.png");
     font-family: Verdana, sans-serif;
     font-size: 100%;
-}
-#Links {
     color:black;
-    border-style:solid;
-    text-decoration: underline;
-    float: right;
-    position:fixed;
-}
-.Nav li a{
-    border-width: 2px;
-    border-color:darkgreen;
-    border-radius:4px;
-    border-style: none;
-    border-radius:4px;
-    background-color: lightslategrey;
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    display: inline;
-    padding: 4px 8px;
-}
-.Nav:hover {
-    background-color: limegreen;
 }
