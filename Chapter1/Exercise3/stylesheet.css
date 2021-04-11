@@ -1,6 +1,7 @@
 
 #Header {
-    color:transparent;
+    color:black;
+    font-style: oblique;
     text-align: center;
     background-color: green;
 }
@@ -16,4 +17,5 @@
 
 body {
     background-image: url("./media/bg.png");
+    font-family: sans-serif;
 }
