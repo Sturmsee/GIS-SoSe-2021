@@ -14,8 +14,15 @@
     background-color: lightslategray;
     border-left: 5px double darkgreen;
 }
-
 body {
     background-image: url("./media/bg.png");
     font-family: sans-serif;
+}
+#Links {
+    background-color:black;
+    border-width: 5px;
+    border-style: solid;
+    border-color:darkgreen;
+    border-radius:4px;
+    margin:auto; 
 }
