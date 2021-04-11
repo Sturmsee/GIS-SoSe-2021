@@ -1,13 +1,18 @@
 
 .ListItem li{
     display: inline;
-
-}
-.ListItem li a{
     background-color: lightslategrey;
     color: darkgreen
 }
-.ListItem li a:hover {
+a{
+    background-color: lightslategrey;
+    color: darkgreen 
+}
+a{
+    background-color: limegreen;
+    color: black;    
+}
+.ListItem li:hover {
     background-color: limegreen;
     color: black;
 }
