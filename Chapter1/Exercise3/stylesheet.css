@@ -23,6 +23,7 @@ body {
     border-style:solid;
     text-decoration: underline;
     float: right;
+    position:fixed;
 }
 
 .Nav {
