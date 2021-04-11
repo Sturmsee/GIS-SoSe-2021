@@ -1,9 +1,10 @@
 
-.ListItem a{
+.ListItem li a{
+    display: inline;
     background-color: lightslategrey;
     color: darkgreen
 }
-.ListItem a:hover {
+.ListItem li a:hover {
     background-color: limegreen;
     color: black;
 }
@@ -17,8 +18,8 @@
     list-style-type: none;
     margin:0px;
     padding:0px;
-    display: inline;
-    float: right;
+
+    right:0;
 }
 #Header {
     background-color: green;
