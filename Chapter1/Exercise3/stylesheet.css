@@ -5,10 +5,9 @@
     color: darkgreen
 }
 a{
-    background-color: lightslategrey;
     color: darkgreen 
 }
-a{
+a:hover{
     background-color: limegreen;
     color: black;    
 }
