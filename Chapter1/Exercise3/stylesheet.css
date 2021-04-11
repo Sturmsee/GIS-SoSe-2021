@@ -1,6 +1,9 @@
 
-.ListItem li a{
+.ListItem li{
     display: inline;
+
+}
+.ListItem li a{
     background-color: lightslategrey;
     color: darkgreen
 }
