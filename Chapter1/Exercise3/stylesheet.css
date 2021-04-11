@@ -6,8 +6,7 @@
     background-color: green;
 }
 #Navigation {
-    color: ghostwhite;
-    background-color: black;
+    color: black;
 }
 .Blocks {
     color:black;
@@ -20,6 +19,7 @@ body {
     font-size: 100%;
 }
 #Links {
+    color:black;
     border-style:solid;
     text-decoration: underline;
     float: right;
