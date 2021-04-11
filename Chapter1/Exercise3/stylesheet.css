@@ -20,8 +20,7 @@ li a:hover{
     padding:0px;
     right:0;
     width:4em;
-    display: inline;
-    position: fixed;
+    position: sticky;
 }
 #Header {
     background-color: green;
