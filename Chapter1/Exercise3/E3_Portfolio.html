@@ -10,17 +10,49 @@
   <link rel="stylesheet" href="stylesheet.css">
   <script src="https://kit.fontawesome.com/3b7b821b20.js" crossorigin="anonymous"></script>
 </head>
-<body> 
-  <ul id="Links">
-  <li><a class="active" href="./E3_Portfolio.html">Portfolio</a></li>
-  <li><a href="./Kontakt.html">Kontakt</a></li>
-  <li><a href="./Steckbrief.html">Über mich</a></li>
-</ul>
-<h1 id="Header">Portfolio</h1><hr>
-<ul id="NavLeiste">
-  <li class="Nav"><a href="#Links">Navigation</li>
-  <li class="Nav"><a href="#Works">Werke</a></li>
-  <li class="Nav"><a href="#">Sonstiges</a></li>
-</ul>
+<body>
+  <header>
+    <nav>
+      <a href="./E3_Portfolio.html">Portfolio</a>
+      <a href="./Kontakt.html">Kontakt</a>
+      <a href="./Steckbrief.html">Über mich</a>
+    </nav>
+  <h1 id="Header">Meine Arbeiten</h1>
+</header>
+<ul> 
+    <li><a href="#Header">zum Titel</a></li>
+    <li><a href="#Works">zu den Werken</a></li>
+    <li><a href="#Song">zum Lied</a></li>
+    <li><a href="#Survey">zur Umfrage</a></li>
+    <li><a href="#Links">zu weiteren Seiten</a></li>
+  </ul>
+  <p>Hier sind einige meiner bisherigen Werke zu sehen.</p> <br>
+  <dl id="Works">
+    <dt><a href="https://sturmsee.github.io/GIS-SoSe-2021/E1.html" target="_blank">Probeseite</a> </dt>
+    <dd><em>- die erste Aufgabe aus dem Kurs GIS</em></dd>
+    <dt><a href="./rick.html" target="_blank">Meisterwerk</a></dt>
+    <dd><em>- diese Seite sollte nicht leichtfertig aufgerufen werden</em></dd>
+  </dl>
+  <hr>
+  <p>Ein Lied, an welchem ich mitgewirkt habe</p>
+  <audio controls id="Song">
+    <source src="./media/Misleading%20Path%20V3.mp3" type="audio/mpeg">
+    Scheint als könnte die Datei nicht erkannt werden.
+  </audio>
+  <p>Wie hat dir das Lied gefallen?</p>
+  <form id="Survey">
+    <input type="radio" id="premium" name="wertung" value="premium">
+    <label for="premium"><b>Premium</b></label><br>
+    <input type="radio" id="gut" name="wertung" value="gut">
+    <label for="gut"><b>Gut</b></label><br>
+    <input type="radio" id="solala" name="wertung" value="solala">
+    <label for="solala"><b>So lala</b></label><br>
+    <input type="radio" id="meh" name="wertung" value="meh">
+    <label for="meh"><b>Meh</b></label><br>
+    <input type="radio" id="dreck" name="wertung" value="dreck">
+    <label for="dreck"><b><del>Lösch den Scheiß</del></b></label><br>
+  </form>
+<hr>
+  </body>
 </body>
   </html>

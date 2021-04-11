@@ -1,43 +1,25 @@
-li{
-    float:left;
-}
-a{
-    display: block;;
-}
-li a{
-    background-color: lightslategrey;
-    color: darkgreen;
-    text-decoration:none;
-}
-li a:hover{
-    background-color: limegreen;
-    color: black;    
-}
-#Links {
-    background-color: lightslategrey;
-    list-style-type: none;
-    margin:0px;
-    padding:0px;
-    right:0;
-    width:4em;
-    position: sticky;
-}
-#Header {
+
+header {
     background-color: green;
     color:whitesmoke;
     font-size: 4em;
     margin:auto;
     text-align: center;
 }
+nav {
+    color:black;
+    background-color: lightslategrey;
+}
+
 hr {
-    color:darkgreen;
-    background-color: darkgreen;
+    background-color: black;
 }
 body {
     background-image: url("./media/bg.png");
-    font-family: Verdana, sans-serif;
+    font-family:sans-serif;
     font-size: 100%;
     color:black;
+    text-align: center;
 }
 .active {
     background-color: limegreen;
