@@ -25,8 +25,10 @@ body {
     float: right;
     position:fixed;
 }
-
-.Nav li a{
+li a {
+    display: inline;
+}
+.Nav {
     border-width: 2px;
     border-color:darkgreen;
     border-radius:4px;
@@ -36,7 +38,7 @@ body {
     list-style-type:none;
     margin:0;
     padding:0;
-    display: inline;
+    
     padding: 4px 8px;
 }
 .Nav:hover {
