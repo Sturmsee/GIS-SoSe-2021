@@ -2,21 +2,13 @@
 #Header {
     color:transparent;
     text-align: center;
-    background-color: crimson;
-}
-#Works {
-    color:rosybrown;
-    border-style: groove;
-    border-top-style: none;
-    border-bottom-style: dotted;
-    border-color:slategrey;
-    border-width: 2px;
+    background-color: green;
 }
 #Navigation {
     color: ghostwhite;
     background-color: black;
 }
-#Survey {
+.Blocks {
     color:black;
     background-color: lightslategray;
     border-left: 5px double darkgreen;
