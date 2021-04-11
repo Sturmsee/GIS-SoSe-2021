@@ -1,8 +1,13 @@
-
+li{
+    float:right;
+}
+a{
+    display: block;;
+}
 li a{
-    display: inline;
     background-color: lightslategrey;
-    color: darkgreen
+    color: darkgreen;
+    text-decoration:none;
 }
 li a:hover{
     background-color: limegreen;
@@ -10,23 +15,20 @@ li a:hover{
 }
 #Links {
     background-color: lightslategrey;
-    border-style: solid;
-    border-width: thin;
-    border-radius:1px;
-    border-color:green;
-    position: fixed;
     list-style-type: none;
     margin:0px;
     padding:0px;
     right:0;
+    width:4em;
     display: inline;
-    position: sticky;
+    position: fixed;
 }
 #Header {
     background-color: green;
     color:whitesmoke;
     font-size: 4em;
     margin:auto;
+    text-align: center;
 }
 hr {
     color:darkgreen;
