@@ -99,13 +99,14 @@ body {
     padding: 15px 10px;
     margin: auto;
 }
-.icons a {
-    transition: all 50ms ease-in;
+.icons a{
+    transition: all 200ms ease-in;
     border: 2px white hidden;
 }
 
-.icons a:hover {
-    border: 2px black solid;
+.icons a:hover img{
+    width: 5em;
+    height: 5em;
 }
 
 .icons img {
