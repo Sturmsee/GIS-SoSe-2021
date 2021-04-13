@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="de">
+
 <head>
   <title>Portfolio</title>
   <meta charset="utf-8">
@@ -10,49 +11,76 @@
   <link rel="stylesheet" href="stylesheet.css">
   <script src="https://kit.fontawesome.com/3b7b821b20.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <a href="./E3_Portfolio.html">Portfolio</a>
-      <a href="./Kontakt.html">Kontakt</a>
-      <a href="./Steckbrief.html">Über mich</a>
-    </nav>
-  <h1 id="Header">Meine Arbeiten</h1>
-</header>
-<ul> 
-    <li><a href="#Header">zum Titel</a></li>
-    <li><a href="#Works">zu den Werken</a></li>
-    <li><a href="#Song">zum Lied</a></li>
-    <li><a href="#Survey">zur Umfrage</a></li>
-    <li><a href="#Links">zu weiteren Seiten</a></li>
-  </ul>
-  <p>Hier sind einige meiner bisherigen Werke zu sehen.</p> <br>
-  <dl id="Works">
-    <dt><a href="https://sturmsee.github.io/GIS-SoSe-2021/E1.html" target="_blank">Probeseite</a> </dt>
-    <dd><em>- die erste Aufgabe aus dem Kurs GIS</em></dd>
-    <dt><a href="./rick.html" target="_blank">Meisterwerk</a></dt>
-    <dd><em>- diese Seite sollte nicht leichtfertig aufgerufen werden</em></dd>
-  </dl>
-  <hr>
-  <p>Ein Lied, an welchem ich mitgewirkt habe</p>
-  <audio controls id="Song">
-    <source src="./media/Misleading%20Path%20V3.mp3" type="audio/mpeg">
-    Scheint als könnte die Datei nicht erkannt werden.
-  </audio>
-  <p>Wie hat dir das Lied gefallen?</p>
-  <form id="Survey">
-    <input type="radio" id="premium" name="wertung" value="premium">
-    <label for="premium"><b>Premium</b></label><br>
-    <input type="radio" id="gut" name="wertung" value="gut">
-    <label for="gut"><b>Gut</b></label><br>
-    <input type="radio" id="solala" name="wertung" value="solala">
-    <label for="solala"><b>So lala</b></label><br>
-    <input type="radio" id="meh" name="wertung" value="meh">
-    <label for="meh"><b>Meh</b></label><br>
-    <input type="radio" id="dreck" name="wertung" value="dreck">
-    <label for="dreck"><b><del>Lösch den Scheiß</del></b></label><br>
-  </form>
-<hr>
-  </body>
+
+  <div class="navbar">
+    <a class="active" href="./E3_Portfolio.html">Portfolio</a>
+    <a href="./Kontakt.html">Kontakt</a>
+    <a href="./Steckbrief.html">Über mich</a>
+  </div>
+
+  <div class="main">
+    <h1 id="headline">Meine Arbeiten</h1>
+
+    <div class="page_nav">
+      <a href="#works">zu den Werken</a>
+      <a href="#song">zum Lied</a>
+      <a href="#survey">zur Umfrage</a>
+    </div>
+
+    <div class="icons">
+      <a href="https://steamcommunity.com/id/schiff98/" target="_blankt"><img src="./media/Steam_icon_logo.svg.png" alt="Steam"></a>
+      <a href="https://www.instagram.com/niffmann/" target="_blank"><img src="./media/instagram_logo.png" alt="Instagram"></a>
+    </div>
+
+    <img class="picture" src="./media/chaossymbol.jpeg" alt="Chaossymbol">
+
+    <p>Hier sind einige meiner bisherigen Werke zu sehen.</p>
+
+    <dl id="works">
+      <dt><a href="../Exercise1/E1.html" target="_blank">Probeseite</a></dt>
+      <dd><em>- die erste Aufgabe aus dem Kurs GIS</em></dd>
+      <dt><a href="../Exercise2/E2_Portfolio.html" target="_blank">Portfolio 2</a></dt>
+      <dd><em>- das Portfolio aus Aufgabe 2</em></dd>
+      <dt><a href="../Exercise2/rick.html" target="_blank">Meisterwerk</a></dt>
+      <dd><em>- diese Seite sollte nicht leichtfertig aufgerufen werden</em></dd>
+    </dl>
+
+    <hr>
+
+    <div class="audio_survey">
+      <p>Ein Lied, an welchem ich mitgewirkt habe</p>
+      <audio controls id="song">
+        <source src="./media/Misleading%20Path%20V3.mp3" type="audio/mpeg">
+        Scheint als könnte die Datei nicht erkannt werden.
+      </audio>
+
+      
+
+      <div class="survey">
+        <p>Wie hat dir das Lied gefallen?</p>
+        <form id="survey">
+          <input type="radio" id="premium" name="wertung" value="premium">
+          <label for="premium"><b>Premium</b></label><br>
+          <input type="radio" id="gut" name="wertung" value="gut">
+          <label for="gut"><b>Gut</b></label><br>
+          <input type="radio" id="solala" name="wertung" value="solala">
+          <label for="solala"><b>So lala</b></label><br>
+          <input type="radio" id="meh" name="wertung" value="meh">
+          <label for="meh"><b>Meh</b></label><br>
+          <input type="radio" id="dreck" name="wertung" value="dreck">
+          <label for="dreck"><b><del>Lösch den Scheiß</del></b></label><br>
+        </form>
+      </div>
+    </div>
+
+    <hr>
+    <a href="#headline">Zurück zum Anfang</a>
+  </div>
+
+
+
 </body>
-  </html>
+
+</html>
