@@ -1,3 +1,9 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 
 body {
     background-image: url("./media/bg.png");
@@ -8,7 +14,7 @@ body {
     margin:0;
 }
 
-/*Sticky Navigation*/
+/* Sticky Navigation */
 .navbar {
     display: flex;
     flex-flow: row nowrap;
@@ -38,12 +44,13 @@ body {
     background: white;
 }
 
-/*Wenn ein Link aktiv ist*/
+/* Wenn ein Link aktiv ist */
 .active {
     background-color: dimgrey;
     color:white;
 }
 
+/* Hauptkörper */
 .main {
     margin-top:75px;
     margin-left:auto;
@@ -61,6 +68,7 @@ body {
     color:white
 }
 
+/* Inpage Navigation */
 .page_nav {
     display: flex;
     flex-flow: row nowrap;
@@ -89,6 +97,7 @@ body {
     color: black;
 }
 
+/* Social Media Links */
 .icons {
     display: flex;
     flex-flow: row nowrap;
@@ -99,6 +108,14 @@ body {
     padding: 15px 10px;
     margin: auto;
 }
+
+@media screen and (max-width:800px) {
+    .icons {
+        justify-content: space-between;
+        top:90%;
+    }
+}
+
 .icons a{
     transition: all 200ms ease-in;
     border: 2px white hidden;
@@ -195,5 +212,9 @@ ul#information li {
     max-width: 780px;
     width: 40em;
     height: 20em;
+}
+
+a[href*="Exercise"]:hover{
+    color:darkcyan;
 }
 
