@@ -148,6 +148,10 @@ hr {
         width:100%;
         max-width: 100%;
     }
+    .box textarea {
+        width:100%;
+        max-width: 100%;
+    }
 }
 
 dl {
@@ -212,6 +216,7 @@ ul#information li {
     border-radius: 5px;
     background-color: white;
 }
+
 
 .box textarea {
     overflow: scroll;
