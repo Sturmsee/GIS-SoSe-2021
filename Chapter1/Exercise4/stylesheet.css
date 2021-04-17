@@ -143,6 +143,12 @@ hr {
     border:2px black solid;
     margin-top: 4px;
 }
+@media screen and (max-width:800px){
+    .picture {
+        width:100%;
+        max-width: 100%;
+    }
+}
 
 dl {
     background-color: rgb(206, 206, 206);
