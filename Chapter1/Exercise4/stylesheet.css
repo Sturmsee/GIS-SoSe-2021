@@ -148,8 +148,8 @@ hr {
         width:100%;
         max-width: 100%;
     }
-    .box textarea {
-        width:100%;
+    textarea.box  {
+        width:80%;
         max-width: 100%;
     }
 }
@@ -221,7 +221,7 @@ ul#information li {
 .box textarea {
     overflow: scroll;
     max-width: 780px;
-    width: 40em;
+    width: 80%;
     height: 20em;
 }
 
