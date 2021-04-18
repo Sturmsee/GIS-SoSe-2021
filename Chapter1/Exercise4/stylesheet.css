@@ -229,14 +229,3 @@ a[href*="Exercise"]:hover{
     color:darkcyan;
 }
 
-a:last-of-type.main {
-    color: green;
-    background-color: lightslategrey;
-    border: 1px black solid;
-    transition: all 200ms ease-in;
-}
-
-a:last-of-type:hover {
-   text-decoration: none;
-   background-color: white;
-}
