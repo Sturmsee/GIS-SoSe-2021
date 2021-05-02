@@ -73,4 +73,20 @@ function join(array1, array2) {
     return array1;
 }
 console.log(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]));
+//C)
+function split(arr1, index1, index2) {
+    var between;
+    if (index1 < index2) {
+        for (let index = 0; index < index2 - index1; index++) {
+            between[index] = arr1[index1 + index];
+        }
+    }
+    else {
+        for (let index = 0; index < index1 - index2; index++) {
+            between[index] = arr1[index2 + index];
+        }
+    }
+    return between;
+}
+console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));
 //# sourceMappingURL=script.js.map
