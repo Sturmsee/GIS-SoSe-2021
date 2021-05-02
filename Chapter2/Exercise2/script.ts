@@ -63,3 +63,27 @@ class Student {
         return student.lastName + ", " + student.firstName + ": " + student.course ;
     }
 }
+
+//Aufgabe 2
+//A)
+function backwards(array: string[]): string {
+    var bArray: string[] = [];
+    var arraySum: string = array[array.length] + " ";
+    for (let index: number = 0; index <= array.length; index++) {
+        bArray[index] = array[array.length - index];
+        arraySum += bArray[index] + " "; 
+    }
+    return arraySum;
+}
+
+console.log(backwards(["ad profundis", "Kartoffelsack", "Biene", "Dreck"]));
+
+//B)
+function join(array1: string[], array2: string[]): string[] {
+    for (let index: number = 0; index < array2.length; index++) {
+        array1[array1.length] = array2[index];
+    }
+    return array1;
+}
+
+console.log(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]));
