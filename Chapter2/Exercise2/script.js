@@ -92,4 +92,7 @@ console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"
 //Aufgabe 3
 //A)
 let canvas = document.getElementById("myFirstCanvas");
+let context = canvas.getContext("2d");
+var rec = { xCord: 10, yCord: 10, width: 20, height: 5 };
+context.fillRect(10, 10, 20, 5);
 //# sourceMappingURL=script.js.map
