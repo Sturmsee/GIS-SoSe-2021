@@ -102,4 +102,9 @@ function split(arr1: string[], index1: number, index2: number): string[] {
     }
     return between;
 }
-console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));
+console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
+
+
+//Aufgabe 3
+//A)
+let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("myFirstCanvas");
