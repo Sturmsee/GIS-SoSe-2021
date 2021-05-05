@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 var context: CanvasRenderingContext2D = canvas.getContext("2d");
 
-context.fillRect(100, 100, 100, 100);
+//context.fillRect(100, 100, 100, 100);
 
 function circles(color: string): void {
     for (let index: number = 0; index < 50; index++) {
@@ -21,3 +21,17 @@ function circles(color: string): void {
 }
 
 circles("red");
+
+function drawRect(): void {
+    var x: number = Math.random() * innerWidth;
+    var y: number = Math.random() * innerHeight;
+    var w: number = Math.random() * 200;
+    var h: number = Math.random() * 200;
+
+    context.beginPath();
+    context.fillRect(x, y, w, h);
+    context.strokeStyle = "black";
+    context.stroke();
+}
+
+drawRect();
