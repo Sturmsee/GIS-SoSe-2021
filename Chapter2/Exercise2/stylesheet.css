@@ -229,3 +229,6 @@ a[href*="Exercise"]:hover{
     color:darkcyan;
 }
 
+#myCanvas {
+    border: 1px black solid;
+}

@@ -88,11 +88,5 @@ function split(arr1, index1, index2) {
     }
     return between;
 }
-console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5)); //Ich verstehe nicht was genau der Fehler ist
-//Aufgabe 3
-//A)
-let canvas = document.getElementById("myFirstCanvas");
-let context = canvas.getContext("2d");
-var rec = { xCord: 10, yCord: 10, width: 20, height: 5 };
-context.fillRect(10, 10, 20, 5);
+//console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
 //# sourceMappingURL=script.js.map

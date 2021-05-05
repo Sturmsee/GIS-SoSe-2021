@@ -102,25 +102,6 @@ function split(arr1: string[], index1: number, index2: number): string[] {
     }
     return between;
 }
-console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
+//console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
 
 
-//Aufgabe 3
-//A)
-
-let canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("myFirstCanvas");
-let context: CanvasRenderingContext2D = canvas.getContext("2d");
-
-
-//B)
-
-interface Rectangle {
-    xCord: number;
-    yCord: number;
-    width: number;
-    height: number;
-}
-
-var rec: Rectangle = {xCord: 10,  yCord: 10, width: 20, height: 5};
-
-context.fillRect(10, 10, 20, 5);
