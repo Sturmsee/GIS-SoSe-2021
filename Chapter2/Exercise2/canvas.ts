@@ -48,7 +48,7 @@ function animate(): void {
 
     context.beginPath();
     context.arc(100 + dx, 30 + dy / 2, 35, 0, Math.PI * 2, false);
-    context.strokeStyle = "ligthblue";
+    context.strokeStyle = "green";
     context.stroke();
 
     if (100 + dx + 35 > innerWidth || 100 + dx - 35 < 0) {
