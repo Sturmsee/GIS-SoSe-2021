@@ -43,7 +43,7 @@ function animate() {
     if (100 + dx + 35 > innerWidth || 100 + dx - 35 < 0) {
         dx = -dx;
     }
-    if (30 + dy + 35 > innerHeight || 30 + dy - 35 < 0) {
+    if (30 + dy - 35 > innerHeight || 30 + dy + 35 < 0) {
         dy = -dy;
     }
     time++;
