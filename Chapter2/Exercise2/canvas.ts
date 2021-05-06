@@ -44,7 +44,7 @@ var dx: number = 4;
 var dy: number = 4;
 function animate(): void {
     requestAnimationFrame(animate);
-    context.clearRect(0, 0, innerWidth, innerHeight);
+   // context.clearRect(0, 0, innerWidth, innerHeight);
 
     context.beginPath();
     context.arc(100 + dx, 30 + dy / 2, 35, 0, Math.PI * 2, false);
