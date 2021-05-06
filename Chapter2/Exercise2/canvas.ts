@@ -40,23 +40,28 @@ function drawRect(): void {
 drawRect();
 
 var time: number = 0;
-var fx: number = 0;
 var dx: number = 4;
+var dy: number = 4;
 function animate(): void {
     requestAnimationFrame(animate);
     context.clearRect(0, 0, innerWidth, innerHeight);
 
     context.beginPath();
-    context.arc(100 + fx, 30 + time / 2, 35, 0, Math.PI * 2, false);
+    context.arc(100 + dx, 30 + dy / 2, 35, 0, Math.PI * 2, false);
     context.strokeStyle = "ligthblue";
     context.stroke();
 
-    if (fx + 35 > innerWidth || fx - 35 < 0) {
+    if (100 + dx + 35 > innerWidth || 100 + dx - 35 < 0) {
         dx = -dx;
     }
-    
+
+    if (30 + dy + 35 > innerHeight || 30 + dy - 35 < 0) {
+        dy = -dy;
+    }
+
     time++;
-    fx += dx;
+    dx++;
+    dy++;
 }
 
 animate();
