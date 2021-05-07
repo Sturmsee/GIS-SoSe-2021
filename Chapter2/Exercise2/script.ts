@@ -90,7 +90,7 @@ console.log(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]));
 
 //C)
 function split(arr1: string[], index1: number, index2: number): string[] {
-    var between: string[];
+    var between: string[] = [];
     if (index1 < index2) {
          for (let index: number = 0; index < index2 - index1; index++) {
             between[index] = arr1[index1 + index];
@@ -102,6 +102,6 @@ function split(arr1: string[], index1: number, index2: number): string[] {
     }
     return between;
 }
-//console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
+console.log(split(join(["Fischers ", "Fritz "], ["fischt ", "frische ", "Fische"]), 2, 5));  //Ich verstehe nicht was genau der Fehler ist
 
 

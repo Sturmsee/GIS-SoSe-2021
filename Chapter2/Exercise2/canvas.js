@@ -30,25 +30,55 @@ function drawRect() {
     context.stroke();
 }
 drawRect();
-var time = 0;
-var dx = 4;
-var dy = 4;
-function animate() {
+function Circle(posX, posY, dx, dy, radius) {
+    this.posX = posX;
+    this.posY = posY;
+    this.dx = dx;
+    this.dy = dy;
+    this.radius = radius;
+    this.draw = function () {
+        context.beginPath();
+        context.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2, false);
+        context.strokeStyle = "green";
+        context.stroke();
+    };
+    this.update = function () {
+        if (this.posX + this.radius > innerWidth || this.posX - this.radius < 0) {
+            this.dx = -this.dx;
+        }
+        if (this.posY + this.radius > innerHeight || this.posY - this.radius < 0) {
+            this.dy = -this.dy;
+        }
+        this.posX += this.dx;
+        this.posY += this.dy;
+        this.draw();
+    };
+}
+var circle = new Circle(200, 200, 3, 3, 30);
+/*
+var posY: number = Math.random() * innerHeight;
+var dx: number = (Math.random() - 0.5) * 8;
+var dy: number = (Math.random() - 0.5) * 8;
+var radius: number = 35;
+function animate(): void {
     requestAnimationFrame(animate);
-    // context.clearRect(0, 0, innerWidth, innerHeight);
+    context.clearRect(0, 0, innerWidth, innerHeight);
+
     context.beginPath();
-    context.arc(100 + dx, 30 + dy / 2, 35, 0, Math.PI * 2, false);
+    context.arc(posX, posY, radius, 0, Math.PI * 2, false);
     context.strokeStyle = "green";
     context.stroke();
-    if (100 + dx + 35 > innerWidth || 100 + dx - 35 < 0) {
+    
+    if (posX + radius > innerWidth || posX - radius < 0) {
         dx = -dx;
     }
-    if (30 + dy - 35 > innerHeight || 30 + dy + 35 < 0) {
+    if (posY + radius > innerHeight || posY - radius < 0) {
         dy = -dy;
     }
-    time++;
-    dx++;
-    dy++;
+
+    posX += dx;
+    posY += dy;
 }
-animate();
+
+animate(); */
 //# sourceMappingURL=canvas.js.map
