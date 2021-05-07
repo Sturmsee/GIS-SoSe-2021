@@ -56,6 +56,7 @@ function Circle(posX, posY, dx, dy, radius) {
 }
 var circle = new Circle(200, 200, 3, 3, 30);
 /*
+var posX: number = Math.random() * innerWidth;
 var posY: number = Math.random() * innerHeight;
 var dx: number = (Math.random() - 0.5) * 8;
 var dy: number = (Math.random() - 0.5) * 8;
