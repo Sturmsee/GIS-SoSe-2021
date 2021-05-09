@@ -1,4 +1,4 @@
-// tslint:disable-next-line: typedef
+
 var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("myCanvas");
 
 canvas.width = window.innerWidth;
@@ -9,12 +9,12 @@ var context: CanvasRenderingContext2D = canvas.getContext("2d");
 //context.fillRect(100, 100, 100, 100);
 
 function circles(): void {
-    var color: string;
-    var colorArr: string[] = ["blue", "red", "green", "yellow", "black", "gray", "orange", "turquoise", "magenta", "brown", "white"];
+    let color: string;
+    let colorArr: string[] = ["blue", "red", "green", "yellow", "black", "gray", "orange", "turquoise", "magenta", "brown", "white"];
     for (let index: number = 0; index < 50; index++) {
         color = colorArr[Math.round(Math.random() * colorArr.length)];
-        var x: number = Math.random() * innerWidth;
-        var y: number = Math.random() * innerHeight;
+        let x: number = Math.random() * innerWidth;
+        let y: number = Math.random() * innerHeight;
         context.beginPath();
         context.arc(x, y, 25, 0, Math.PI * 2, false);
         context.strokeStyle = color;
@@ -26,10 +26,10 @@ function circles(): void {
 circles();
 
 function drawRect(): void {
-    var x: number = Math.random() * innerWidth;
-    var y: number = Math.random() * innerHeight;
-    var w: number = Math.random() * 200;
-    var h: number = Math.random() * 200;
+    let x: number = Math.random() * innerWidth;
+    let y: number = Math.random() * innerHeight;
+    let w: number = Math.random() * 200;
+    let h: number = Math.random() * 200;
 
     context.beginPath();
     context.fillRect(x, y, w, h);
@@ -70,11 +70,11 @@ function Circle(posX: number, posY: number, dx: number, dy: number, radius: numb
 var circle = new Circle(200, 200, 3, 3, 30);
 */
 
-var posX: number = Math.random() * innerWidth;
-var posY: number = Math.random() * innerHeight;
-var dx: number = (Math.random() - 0.5) * 8;
-var dy: number = (Math.random() - 0.5) * 8;
-var radius: number = 35;
+let posX: number = Math.random() * innerWidth;
+let posY: number = Math.random() * innerHeight;
+let dx: number = (Math.random() - 0.5) * 8;
+let dy: number = (Math.random() - 0.5) * 8;
+let radius: number = 35;
 function animate(): void {
     requestAnimationFrame(animate);
     context.clearRect(0, 0, innerWidth, innerHeight);
