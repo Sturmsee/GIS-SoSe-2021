@@ -18,3 +18,9 @@ function moreBoxes(): void {
 function noBoxes(): void {
     location.reload();
 }
+
+interface Choice {
+    hair: string;
+    shirt: string;
+    pants: string;
+}
