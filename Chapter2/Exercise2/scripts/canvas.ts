@@ -23,21 +23,47 @@ function circles(): void {
     }
 }
 
-circles();
-
-function drawRect(): void {
-    let x: number = Math.random() * innerWidth;
-    let y: number = Math.random() * innerHeight;
-    let w: number = Math.random() * 200;
-    let h: number = Math.random() * 200;
-
-    context.beginPath();
-    context.fillRect(x, y, w, h);
-    context.strokeStyle = "black";
-    context.stroke();
+interface Rechteck {
+    posX: number;
+    posY: number;
+    width: number;
+    height: number;
+    colour: string;
 }
 
-drawRect();
+circles();
+function createRect(): Rechteck {
+    let x: number = Math.floor(Math.random() * innerWidth);
+    let y: number = Math.floor(Math.random() * innerHeight);
+    let w: number = Math.floor(Math.random() * 200);
+    let h: number = Math.floor(Math.random() * 200);
+    let colorArr: string[] = ["blue", "red", "green", "yellow", "black", "gray", "orange", "turquoise", "magenta", "brown", "white"];
+    let color: string = colorArr[Math.round(Math.random() * colorArr.length)];
+
+    return {
+        posX: x,
+        posY: y,
+        width: w,
+        height: h,
+        colour: color
+    };
+}
+
+function drawRect(rect: Rechteck): void {
+
+    context.beginPath();
+    context.fillStyle = rect.colour;
+    context.fillRect(rect.posX, rect.posY, rect.width, rect.height);
+    context.stroke();
+}
+let rects: Rechteck[] = [];
+for (let index: number = 0; index < Math.floor(Math.random() * 7); index++) {
+    rects.push(createRect());
+}
+for (let rect of rects) {
+    drawRect(rect);
+}
+
 /*
 function Circle(posX: number, posY: number, dx: number, dy: number, radius: number) {
     this.posX = posX;
@@ -67,7 +93,7 @@ function Circle(posX: number, posY: number, dx: number, dy: number, radius: numb
     }
 }
 
-var circle = new Circle(200, 200, 3, 3, 30);
+let circle = new Circle(200, 200, 3, 3, 30);
 */
 
 let posX: number = Math.random() * innerWidth;

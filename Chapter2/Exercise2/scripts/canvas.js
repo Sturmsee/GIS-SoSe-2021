@@ -18,17 +18,34 @@ function circles() {
     }
 }
 circles();
-function drawRect() {
-    let x = Math.random() * innerWidth;
-    let y = Math.random() * innerHeight;
-    let w = Math.random() * 200;
-    let h = Math.random() * 200;
+function createRect() {
+    let x = Math.floor(Math.random() * innerWidth);
+    let y = Math.floor(Math.random() * innerHeight);
+    let w = Math.floor(Math.random() * 200);
+    let h = Math.floor(Math.random() * 200);
+    let colorArr = ["blue", "red", "green", "yellow", "black", "gray", "orange", "turquoise", "magenta", "brown", "white"];
+    let color = colorArr[Math.round(Math.random() * colorArr.length)];
+    return {
+        posX: x,
+        posY: y,
+        width: w,
+        height: h,
+        colour: color
+    };
+}
+function drawRect(rect) {
     context.beginPath();
-    context.fillRect(x, y, w, h);
-    context.strokeStyle = "black";
+    context.fillStyle = rect.colour;
+    context.fillRect(rect.posX, rect.posY, rect.width, rect.height);
     context.stroke();
 }
-drawRect();
+let rects = [];
+for (let index = 0; index < Math.floor(Math.random() * 7); index++) {
+    rects.push(createRect());
+}
+for (let rect of rects) {
+    drawRect(rect);
+}
 /*
 function Circle(posX: number, posY: number, dx: number, dy: number, radius: number) {
     this.posX = posX;
@@ -58,7 +75,7 @@ function Circle(posX: number, posY: number, dx: number, dy: number, radius: numb
     }
 }
 
-var circle = new Circle(200, 200, 3, 3, 30);
+let circle = new Circle(200, 200, 3, 3, 30);
 */
 let posX = Math.random() * innerWidth;
 let posY = Math.random() * innerHeight;
