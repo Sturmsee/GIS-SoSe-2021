@@ -1,4 +1,4 @@
-var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("yourLegofigure");
+/*var canvas: HTMLCanvasElement = <HTMLCanvasElement> document.getElementById("yourLegofigure");
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -51,3 +51,4 @@ drawHand();
 drawHead();
 drawHair("brown");
 drawPants("blue");
+*/
