@@ -1,5 +1,4 @@
-import { AvatarPart } from "./data";
-import { allParts } from "./data";
+import { AvatarPart, allParts } from "./data";
 
 
 function createChoices(_parts: AvatarPart): HTMLDivElement {
@@ -18,7 +17,7 @@ function createChoices(_parts: AvatarPart): HTMLDivElement {
     
     return div;
 }
-function subEvent(e: Event): void {
+function subEvent(): void {
     let selection: string = document.querySelector("input").value;
     console.log(selection);
 }

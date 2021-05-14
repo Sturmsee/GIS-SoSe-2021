@@ -13,7 +13,7 @@ function createChoices(_parts) {
     div.appendChild(choice);
     return div;
 }
-function subEvent(e) {
+function subEvent() {
     let selection = document.querySelector("input").value;
     console.log(selection);
 }
