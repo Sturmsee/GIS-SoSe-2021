@@ -1,13 +1,38 @@
 import { AvatarPart } from "./data";
 import { allParts } from "./data";
 
-let div: HTMLDivElement =  document.createElement("div");
 
-function showSelectableParts(parts: AvatarPart[]) {
-    let choices: HTMLFormElement = <HTMLFormElement> document.getElementById("choices");
-    let choice: HTMLSelectElement =  document.createElement("select");
-    for (let i: number; i < parts.length; i++) {
-        choice.classList.add("choice");
-        choice.innerText = parts;
-    }
+function createChoices(_parts: AvatarPart): HTMLDivElement {
+
+    let div: HTMLDivElement = document.createElement("div");
+    div.classList.add("choices");
+
+    let img: HTMLImageElement = document.createElement("img");
+    img.src = _parts.image;
+    div.appendChild(img);
+    
+    let choice: HTMLInputElement = document.createElement("input");
+    choice.type = "radio";
+    choice.innerText = _parts.part;
+    div.appendChild(choice);
+    
+    return div;
 }
+function subEvent(e: Event): void {
+    let selection: string = document.querySelector("input").value;
+    console.log(selection);
+}
+
+function showSelectableParts(_parts: AvatarPart[]): void {
+    let btn: HTMLButtonElement = document.createElement("button");
+    btn.innerText = "Submit";
+    btn.addEventListener("click", subEvent);
+    let allChoices: HTMLDivElement = <HTMLDivElement> document.getElementById("choicesDiv");
+    for (let _part of _parts) {
+        let div: HTMLDivElement = createChoices(_part);
+        allChoices.appendChild(div);
+    }
+    allChoices.appendChild(btn);
+}
+
+showSelectableParts(allParts.faces);

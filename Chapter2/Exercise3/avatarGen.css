@@ -7,12 +7,12 @@ body {
     margin:0;
 }
 
-#choiesDiv {
+#choicesDiv {
     display: flex;
     justify-content: center;
 }
 
-#choicesForm {
+.choices {
     display: flex;
 	flex-direction: row;
 	margin: 20px;
@@ -21,10 +21,3 @@ body {
 	background-color: rgb(97, 110, 122);
 }
 
-.choice {
-    max-width: 100px;
-	align-self: center;
-	border-radius: 5px;
-	margin-bottom: 5px;
-	font-size: large;
-}
