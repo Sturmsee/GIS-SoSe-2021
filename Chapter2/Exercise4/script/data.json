@@ -1,0 +1,30 @@
+{
+    "AvatarParts": {
+        "faces": [
+            {"image": "#", "part": "RedNose/BraidedHair"},
+            {"image": "#", "part": "ShortNose/SpikedHair"},
+            {"image": "#", "part": "StubbyNose/ShortHair"},
+            {"image": "#", "part": "NoNose/NoHair"}
+        ],
+        "shirts": [
+            {"image": "#", "part": "LongSleeve/Red"},
+            {"image": "#", "part": "LongSleeve/Green"},
+            {"image": "#", "part": "ShortSleeve/Black"},
+            {"image": "#", "part": "ShortSleeve/Blue"}
+        ],
+        "pants": [
+            {"image": "#", "part": "Jeans/Blue"},
+            {"image": "#", "part": "Jeans/Black"},
+            {"image": "#", "part": "Shorts/Green"},
+            {"image": "#", "part": "Shorts/Brown"}
+        ]
+    },
+
+
+    "Selection": [
+        {"selectFace": " "},
+        {"selectShirt": " "},
+        {"selectPants": " "}
+    ]
+}
+
