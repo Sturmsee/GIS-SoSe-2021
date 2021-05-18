@@ -23,7 +23,7 @@ var Exercise2_4;
     }
     function intoJSON(_input) {
         let inputPants = JSON.stringify(_input);
-        sessionStorage.setItem(`pants`, inputPants);
+        sessionStorage.setItem("pants", inputPants);
     }
     function showSelectableParts(_parts) {
         let allChoices = document.getElementById("choicesDiv");

@@ -1,25 +1,26 @@
 namespace Exercise2_4 {
 
-    let face: string = JSON.parse(sessionStorage.getItem("inputFace"));
-    let shirt: string = JSON.parse(sessionStorage.getItem("inputShirt"));
-    let pants: string = JSON.parse(sessionStorage.getItem("inputFace"));
+    let face: AvatarPart = JSON.parse(sessionStorage.getItem("face"));
+    let shirt: AvatarPart = JSON.parse(sessionStorage.getItem("shirt"));
+    let pants: AvatarPart = JSON.parse(sessionStorage.getItem("pants"));
 
-    function createSelected(_part: string): HTMLDivElement {
+    function createSelected(_part: AvatarPart): HTMLDivElement {
 
         let div: HTMLDivElement = document.createElement("div");
         div.classList.add("selected");
 
         let img: HTMLImageElement = document.createElement("img");
-        img.src = _part;
+        img.src = _part.image;
         div.appendChild(img);
     
         return div;
     }
 
     function showSelectedParts(): void {
-        createSelected(face);
-        createSelected(shirt);
-        createSelected(pants);
+        let allSelected: HTMLDivElement = <HTMLDivElement> document.getElementById("selectedDiv");
+        allSelected.appendChild(createSelected(face));
+        allSelected.appendChild(createSelected(shirt));
+        allSelected.appendChild(createSelected(pants));
     }
 
     showSelectedParts();

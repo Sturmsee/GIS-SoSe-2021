@@ -30,7 +30,7 @@ namespace Exercise2_4 {
 
     function intoJSON(_input: AvatarPart): void {
         let inputShirt: string = JSON.stringify(_input);
-        sessionStorage.setItem(`shirt`, inputShirt);
+        sessionStorage.setItem("shirt", inputShirt);
     }
 
     function showSelectableParts(_parts: AvatarPart[]): void {
