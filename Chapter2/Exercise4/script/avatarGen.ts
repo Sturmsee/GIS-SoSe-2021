@@ -17,6 +17,7 @@ namespace Exercise2_4 {
         let button: HTMLButtonElement = document.createElement("button");
         button.innerText = "Select";
         button.addEventListener("click", subEvent);
+        div.appendChild(button);
               
         return div;
 

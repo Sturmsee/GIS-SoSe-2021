@@ -13,6 +13,7 @@ var Exercise2_4;
         let button = document.createElement("button");
         button.innerText = "Select";
         button.addEventListener("click", subEvent);
+        div.appendChild(button);
         return div;
         function subEvent(_e) {
             console.log("innere Funktion", _parts);
