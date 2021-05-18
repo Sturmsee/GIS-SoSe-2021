@@ -24,13 +24,13 @@ namespace Exercise2_4 {
         function subEvent(_e: Event): void {
             console.log("innere Funktion", _parts);
             intoJSON(_parts);
-            window.location.href = "../Exercise4/avatarSubpage2.html";
+            window.location.href = "../Exercise4/avatarSelection.html";
         }
     }
 
     function intoJSON(_input: AvatarPart): void {
-        let input: string = JSON.stringify(_input);
-        sessionStorage.setItem(`shirt`, input);
+        let inputPants: string = JSON.stringify(_input);
+        sessionStorage.setItem(`pants`, inputPants);
     }
 
     function showSelectableParts(_parts: AvatarPart[]): void {
@@ -41,5 +41,5 @@ namespace Exercise2_4 {
         }
     }
 
-    showSelectableParts(allParts.shirts);
+    showSelectableParts(allParts.pants);
 }

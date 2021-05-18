@@ -18,12 +18,12 @@ var Exercise2_4;
         function subEvent(_e) {
             console.log("innere Funktion", _parts);
             intoJSON(_parts);
-            window.location.href = "../Exercise4/avatarSelection.html";
+            window.location.href = "../Exercise4/avatarSubpage.html";
         }
     }
     function intoJSON(_input) {
-        let input = JSON.stringify(_input);
-        sessionStorage.setItem(`pants`, input);
+        let inputFace = JSON.stringify(_input);
+        sessionStorage.setItem("face", inputFace);
     }
     function showSelectableParts(_parts) {
         let allChoices = document.getElementById("choicesDiv");
@@ -32,6 +32,6 @@ var Exercise2_4;
             allChoices.appendChild(div);
         }
     }
-    showSelectableParts(Exercise2_4.allParts.pants);
+    showSelectableParts(Exercise2_4.allParts.faces);
 })(Exercise2_4 || (Exercise2_4 = {}));
-//# sourceMappingURL=avatarGen3.js.map
+//# sourceMappingURL=avatarGenFace.js.map

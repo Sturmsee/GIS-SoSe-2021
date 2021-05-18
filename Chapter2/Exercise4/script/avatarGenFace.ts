@@ -1,4 +1,3 @@
-
 namespace Exercise2_4 {
 
     function createChoices(_parts: AvatarPart): HTMLDivElement {
@@ -29,8 +28,8 @@ namespace Exercise2_4 {
     }
 
     function intoJSON(_input: AvatarPart): void {
-        let input: string = JSON.stringify(_input);
-        sessionStorage.setItem("face", input);
+        let inputFace: string = JSON.stringify(_input);
+        sessionStorage.setItem("face", inputFace);
     }
 
     function showSelectableParts(_parts: AvatarPart[]): void {

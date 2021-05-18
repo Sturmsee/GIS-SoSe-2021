@@ -22,8 +22,8 @@ var Exercise2_4;
         }
     }
     function intoJSON(_input) {
-        let input = JSON.stringify(_input);
-        sessionStorage.setItem(`shirt`, input);
+        let inputShirt = JSON.stringify(_input);
+        sessionStorage.setItem(`shirt`, inputShirt);
     }
     function showSelectableParts(_parts) {
         let allChoices = document.getElementById("choicesDiv");
@@ -34,4 +34,4 @@ var Exercise2_4;
     }
     showSelectableParts(Exercise2_4.allParts.shirts);
 })(Exercise2_4 || (Exercise2_4 = {}));
-//# sourceMappingURL=avatarGen2.js.map
+//# sourceMappingURL=avatarGenShirt.js.map
