@@ -1,22 +1,23 @@
+namespace Exercise2_4 {
 
-export interface AvatarPart {
-    image: string;
-    part: string;
-}
+    export interface AvatarPart {
+        image: string;
+        part: string;
+    }
 
-export interface AllAvatarParts {
-    faces: AvatarPart[];
-    shirts: AvatarPart[];
-    pants: AvatarPart[];
-}
+    export interface AllAvatarParts {
+        faces: AvatarPart[];
+        shirts: AvatarPart[];
+        pants: AvatarPart[];
+    }
 
-export interface Avatar {
+    export interface Avatar {
     face: AvatarPart;
     shirt: AvatarPart;
     pant: AvatarPart;
-}
+    }
 
-export let allParts: AllAvatarParts = {
+    export let allParts: AllAvatarParts = {
     faces: [
         {image: "#", part: "RedNoise/BraidedHair"},
         {image: "#", part: "ShortNose/SpikedHair"},
@@ -35,4 +36,5 @@ export let allParts: AllAvatarParts = {
         {image: "#", part: "Shorts/Green"},
         {image: "#", part: "Shorts/Brown"}
     ]
-};
+    };
+}
