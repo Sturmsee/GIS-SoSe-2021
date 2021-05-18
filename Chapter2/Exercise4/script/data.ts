@@ -19,10 +19,10 @@ namespace Exercise2_4 {
 
     export let allParts: AllAvatarParts = {
     faces: [
-        {image: "#", part: "RedNoise/BraidedHair"},
-        {image: "#", part: "ShortNose/SpikedHair"},
-        {image: "#", part: "StubbyNose/ShortHair"},
-        {image: "#", part: "NoNose/NoHair"}
+        {image: "../Exercise4/img/RedNoseBraidedHair.png", part: "RedNoise/BraidedHair"},
+        {image: "../Exercise4/img/ShortNoseSpikedHair.png", part: "ShortNose/SpikedHair"},
+        {image: "../Exercise4/img/StubbyNoseShortHair.png", part: "StubbyNose/ShortHair"},
+        {image: "../Exercise4/img/NoNoseNoHair.png", part: "NoNose/NoHair"}
     ],
     shirts: [
         {image: "#", part: "LongSleeve/Red"},
