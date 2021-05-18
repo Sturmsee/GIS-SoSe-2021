@@ -18,13 +18,7 @@
             {"image": "#", "part": "Shorts/Green"},
             {"image": "#", "part": "Shorts/Brown"}
         ]
-    },
+    }
 
-
-    "Selection": [
-        {"selectFace": " "},
-        {"selectShirt": " "},
-        {"selectPants": " "}
-    ]
 }
 
