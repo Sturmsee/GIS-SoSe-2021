@@ -25,16 +25,16 @@ namespace Exercise2_4 {
         {image: "../Exercise4/img/NoNoseNoHair.png", part: "NoNose/NoHair"}
     ],
     shirts: [
-        {image: "#", part: "LongSleeve/Red"},
-        {image: "#", part: "LongSleeve/Green"},
-        {image: "#", part: "ShortSleeve/Black"},
-        {image: "#", part: "ShortSleeve/Blue"}
+        {image: "../Exercise4/img/LongSleeveRed.png", part: "LongSleeve/Red"},
+        {image: "../Exercise4/img/LongSleeveGreen.png", part: "LongSleeve/Green"},
+        {image: "../Exercise4/img/ShortSleeveBlack.png", part: "ShortSleeve/Black"},
+        {image: "../Exercise4/img/ShortSleeveBlue.png", part: "ShortSleeve/Blue"}
     ],
     pants: [
-        {image: "#", part: "Jeans/Blue"},
-        {image: "#", part: "Jeans/Black"},
-        {image: "#", part: "Shorts/Green"},
-        {image: "#", part: "Shorts/Brown"}
+        {image: "../Exercise4/img/JeansBlue.png", part: "Jeans/Blue"},
+        {image: "../Exercise4/img/JeansBlack.png", part: "Jeans/Black"},
+        {image: "../Exercise4/img/ShortsGreen.png", part: "Shorts/Green"},
+        {image: "../Exercise4/img/ShortsBrown.png", part: "Shorts/Brown"}
     ]
     };
 }
