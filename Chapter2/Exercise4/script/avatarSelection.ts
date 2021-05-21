@@ -25,4 +25,6 @@ namespace Exercise2_4 {
 
     showSelectedParts();
     console.log(face, shirt, pants);
+
+    sessionStorage.clear();
 }

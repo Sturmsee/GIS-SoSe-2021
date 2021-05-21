@@ -20,5 +20,6 @@ var Exercise2_4;
     }
     showSelectedParts();
     console.log(face, shirt, pants);
+    sessionStorage.clear();
 })(Exercise2_4 || (Exercise2_4 = {}));
 //# sourceMappingURL=avatarSelection.js.map

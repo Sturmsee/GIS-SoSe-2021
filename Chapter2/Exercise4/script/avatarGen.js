@@ -1,10 +1,10 @@
-namespace Exercise2_4 {
-
-    let link: string = "";
-    let allParts: AllAvatarParts;
-    
-    function intoJSON(_input: AvatarPart): void {
-        let input: string = JSON.stringify(_input);
+"use strict";
+var Exercise2_4;
+(function (Exercise2_4) {
+    let link = "";
+    let allParts;
+    function intoJSON(_input) {
+        let input = JSON.stringify(_input);
         switch (document.title) {
             case "Avatar Face":
                 sessionStorage.setItem("face", input);
@@ -16,57 +16,44 @@ namespace Exercise2_4 {
                 sessionStorage.setItem("pants", input);
                 break;
         }
-            
     }
-
-    function getJSON(): void {
-        console.log(avatarJSON);
-        allParts = JSON.parse(avatarJSON);
+    function getJSON() {
+        console.log(Exercise2_4.avatarJSON);
+        allParts = JSON.parse(Exercise2_4.avatarJSON);
     }
-
-    function createChoices(_parts: AvatarPart): HTMLDivElement {
-
-        let div: HTMLDivElement = document.createElement("div");
+    function createChoices(_parts) {
+        let div = document.createElement("div");
         div.classList.add("choices");
-
-        let img: HTMLImageElement = document.createElement("img");
+        let img = document.createElement("img");
         img.src = _parts.image;
         div.appendChild(img);
-    
-        let choice: HTMLSpanElement = document.createElement("span");
+        let choice = document.createElement("span");
         choice.innerText = _parts.part;
         div.appendChild(choice);
-
-        let button: HTMLButtonElement = document.createElement("button");
+        let button = document.createElement("button");
         button.innerText = "Select";
         button.addEventListener("click", subEvent);
         div.appendChild(button);
-              
         return div;
-
-        function subEvent(_e: Event): void {
+        function subEvent(_e) {
             console.log("innere Funktion", _parts);
             intoJSON(_parts);
             window.location.href = link;
         }
     }
-
-
-    function showSelectableParts(_parts: AvatarPart[]): void {
-        let allChoices: HTMLDivElement = <HTMLDivElement> document.getElementById("choicesDiv");
-        for (let i: number = 0; i < _parts.length; i++) {
-            let div: HTMLDivElement = createChoices(_parts[i]);
+    function showSelectableParts(_parts) {
+        let allChoices = document.getElementById("choicesDiv");
+        for (let i = 0; i < _parts.length; i++) {
+            let div = createChoices(_parts[i]);
             allChoices.appendChild(div);
         }
-
     }
-
-    function alreadyChosen(): void {
-        let wrapper: HTMLDivElement = <HTMLDivElement> document.getElementById("chosen");
-        let face: AvatarPart = JSON.parse(sessionStorage.getItem("face"));
-        let shirt: AvatarPart = JSON.parse(sessionStorage.getItem("shirt"));
-        let pants: AvatarPart = JSON.parse(sessionStorage.getItem("pants"));
-        let img: HTMLImageElement = document.createElement("img");
+    function alreadyChosen() {
+        let wrapper = document.getElementById("chosen");
+        let face = JSON.parse(sessionStorage.getItem("face"));
+        let shirt = JSON.parse(sessionStorage.getItem("shirt"));
+        let pants = JSON.parse(sessionStorage.getItem("pants"));
+        let img = document.createElement("img");
         if (face) {
             img.src = face.image;
             wrapper.appendChild(img);
@@ -80,11 +67,8 @@ namespace Exercise2_4 {
             wrapper.appendChild(img);
         }
     }
-
-
     getJSON();
-
-    let currentChoices: AvatarPart[] = [];
+    let currentChoices = [];
     switch (document.title) {
         case "Avatar Face":
             link = "../Exercise4/avatarSubpage.html";
@@ -99,10 +83,9 @@ namespace Exercise2_4 {
             currentChoices = allParts.pants;
             break;
     }
-
     showSelectableParts(currentChoices);
-    
     if (sessionStorage) {
         alreadyChosen();
     }
-}
+})(Exercise2_4 || (Exercise2_4 = {}));
+//# sourceMappingURL=avatarGen.js.map

@@ -62,3 +62,16 @@ a:hover {
     background-color: floralwhite;
     box-shadow: 3px 3px 3px 3px darkslategrey;
 }
+
+#chosen {
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    right: 10px;
+    margin: auto;
+}
+
+#chosen img {
+    width: 50px;
+    height: 70px;
+}
