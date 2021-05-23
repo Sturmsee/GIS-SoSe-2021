@@ -2,7 +2,7 @@
 var Exercise2_5;
 (function (Exercise2_5) {
     let link = "";
-    //let responseJSON: string = "";
+    let responseJSON = "";
     let allParts;
     function intoJSON(_input) {
         let input = JSON.stringify(_input);
@@ -21,7 +21,9 @@ var Exercise2_5;
     async function getJSON(_url) {
         let response = await fetch(_url);
         console.log("Response", response);
-        allParts = await response.json();
+        responseJSON = await response.json();
+        allParts = JSON.parse(responseJSON);
+        console.log(allParts);
     }
     function createChoices(_parts) {
         let div = document.createElement("div");
