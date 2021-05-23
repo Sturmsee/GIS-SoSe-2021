@@ -74,15 +74,15 @@ var Exercise2_5;
     let currentChoices = [];
     switch (document.title) {
         case "Avatar Face":
-            link = "../Exercise4/avatarSubpage.html";
+            link = "../Exercise5/avatarSubpage.html";
             currentChoices = allParts.faces;
             break;
         case "Avatar Shirt":
-            link = "../Exercise4/avatarSubpage2.html";
+            link = "../Exercise5/avatarSubpage2.html";
             currentChoices = allParts.shirts;
             break;
         case "Avatar Pants":
-            link = "../Exercise4/avatarSelection.html";
+            link = "../Exercise5/avatarSelection.html";
             currentChoices = allParts.pants;
             break;
     }
