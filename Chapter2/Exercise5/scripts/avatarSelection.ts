@@ -23,6 +23,12 @@ namespace Exercise2_5 {
         allSelected.appendChild(createSelected(pants));
     }
 
+    async function answer(_url: string) {
+    let query: URLSearchParams = new URLSearchParams(<any>sessionStorage);
+    _url = _url + "?" + query.toString();
+    await fetch(_url);
+    }
+
     showSelectedParts();
     console.log(face, shirt, pants);
 
