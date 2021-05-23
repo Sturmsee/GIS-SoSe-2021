@@ -1,7 +1,7 @@
 namespace Exercise2_5 {
 
     let link: string = "";
-    let responseJSON: string = "";
+    //let responseJSON: string = "";
     let allParts: AllAvatarParts;
     
     function intoJSON(_input: AvatarPart): void {
@@ -23,8 +23,8 @@ namespace Exercise2_5 {
     async function getJSON(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
         console.log("Response", response);
-        responseJSON = await response.json();
-        allParts = JSON.parse(responseJSON);
+        allParts = await response.json();
+        
     }
 
     function createChoices(_parts: AvatarPart): HTMLDivElement {
