@@ -23,6 +23,7 @@ var Exercise2_5;
         _url = _url + "?" + query.toString();
         await fetch(_url);
     }
+    answer("https://gis-communication.herokuapp.com/");
     showSelectedParts();
     console.log(face, shirt, pants);
     sessionStorage.clear();

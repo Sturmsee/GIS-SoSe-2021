@@ -29,6 +29,8 @@ namespace Exercise2_5 {
     await fetch(_url);
     }
 
+    answer("https://gis-communication.herokuapp.com/");
+
     showSelectedParts();
     console.log(face, shirt, pants);
 
