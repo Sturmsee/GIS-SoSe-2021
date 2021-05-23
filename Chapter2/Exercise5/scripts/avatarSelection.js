@@ -4,6 +4,7 @@ var Exercise2_5;
     let face = JSON.parse(sessionStorage.getItem("face"));
     let shirt = JSON.parse(sessionStorage.getItem("shirt"));
     let pants = JSON.parse(sessionStorage.getItem("pants"));
+    let serverResponse;
     function createSelected(_part) {
         let div = document.createElement("div");
         div.classList.add("selected");
@@ -14,6 +15,14 @@ var Exercise2_5;
     }
     function showSelectedParts() {
         let allSelected = document.getElementById("selectedDiv");
+        let p = document.createElement("p");
+        if (serverResponse.message) {
+            p.innerText = "Der Server sagt" + serverResponse.message;
+        }
+        else if (serverResponse.error) {
+            p.innerText = "FEHLER: " + serverResponse.error;
+        }
+        allSelected.appendChild(p);
         allSelected.appendChild(createSelected(face));
         allSelected.appendChild(createSelected(shirt));
         allSelected.appendChild(createSelected(pants));
@@ -21,7 +30,8 @@ var Exercise2_5;
     async function answer(_url) {
         let query = new URLSearchParams(sessionStorage);
         _url = _url + "?" + query.toString();
-        await fetch(_url);
+        let response = await fetch(_url);
+        serverResponse = await response.json();
     }
     answer("https://gis-communication.herokuapp.com/");
     showSelectedParts();
