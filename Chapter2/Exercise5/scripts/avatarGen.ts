@@ -3,6 +3,7 @@ namespace Exercise2_5 {
     let link: string = "";
     let responseJSON: string = "";
     let allParts: AllAvatarParts;
+    let currentChoices: AvatarPart[] = [];
     
     function intoJSON(_input: AvatarPart): void {
         let input: string = JSON.stringify(_input);
@@ -26,6 +27,27 @@ namespace Exercise2_5 {
         responseJSON = await response.json();
         allParts = JSON.parse(responseJSON);
         console.log(allParts);
+
+        switch (document.title) {
+            case "Avatar Face":
+                link = "../Exercise5/avatarSubpage.html";
+                currentChoices = allParts.faces;
+                break;
+            case "Avatar Shirt":
+                link = "../Exercise5/avatarSubpage2.html";
+                currentChoices = allParts.shirts;
+                break;
+            case "Avatar Pants":
+                link = "../Exercise5/avatarSelection.html";
+                currentChoices = allParts.pants;
+                break;
+        }
+        
+        showSelectableParts(currentChoices);
+        
+        if (sessionStorage) {
+        alreadyChosen();
+        }
     }
 
     function createChoices(_parts: AvatarPart): HTMLDivElement {
@@ -88,25 +110,5 @@ namespace Exercise2_5 {
 
     getJSON("https://github.com/Sturmsee/GIS-SoSe-2021/blob/main/Chapter2/Exercise5/scripts/data.json");
 
-    let currentChoices: AvatarPart[] = [];
-    switch (document.title) {
-        case "Avatar Face":
-            link = "../Exercise5/avatarSubpage.html";
-            currentChoices = allParts.faces;
-            break;
-        case "Avatar Shirt":
-            link = "../Exercise5/avatarSubpage2.html";
-            currentChoices = allParts.shirts;
-            break;
-        case "Avatar Pants":
-            link = "../Exercise5/avatarSelection.html";
-            currentChoices = allParts.pants;
-            break;
-    }
 
-    showSelectableParts(currentChoices);
-    
-    if (sessionStorage) {
-        alreadyChosen();
-    }
 }
