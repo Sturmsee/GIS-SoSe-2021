@@ -41,16 +41,19 @@ namespace Exercise2_5 {
     }
 
     async function answer(_url: string): Promise<void> {
+        // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>sessionStorage);
         _url = _url + "?" + query.toString();
         let response: Response = await fetch(_url);
         serverResponse = await response.json();
     }
 
-    answer("https://gis-communication.herokuapp.com/");
+    answer("https://gis-communication.herokuapp.com/").then( function (): void {
+        showSelectedParts();
+        console.log(face, shirt, pants);
 
-    showSelectedParts();
-    console.log(face, shirt, pants);
+        sessionStorage.clear();    
+    });
 
-    sessionStorage.clear();
+    
 }

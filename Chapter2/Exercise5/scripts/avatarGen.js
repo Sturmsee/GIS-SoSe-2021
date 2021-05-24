@@ -4,6 +4,7 @@ var Exercise2_5;
     let link = "";
     let responseJSON = "";
     let allParts;
+    let currentChoices = [];
     function intoJSON(_input) {
         let input = JSON.stringify(_input);
         switch (document.title) {
@@ -21,9 +22,7 @@ var Exercise2_5;
     async function getJSON(_url) {
         let response = await fetch(_url);
         console.log("Response", response);
-        responseJSON = await response.json();
-        allParts = JSON.parse(responseJSON);
-        console.log(allParts);
+        responseJSON = await response.text();
     }
     function createChoices(_parts) {
         let div = document.createElement("div");
@@ -71,25 +70,27 @@ var Exercise2_5;
             wrapper.appendChild(img);
         }
     }
-    getJSON("https://github.com/Sturmsee/GIS-SoSe-2021/blob/main/Chapter2/Exercise5/scripts/data.json");
-    let currentChoices = [];
-    switch (document.title) {
-        case "Avatar Face":
-            link = "../Exercise5/avatarSubpage.html";
-            currentChoices = allParts.faces;
-            break;
-        case "Avatar Shirt":
-            link = "../Exercise5/avatarSubpage2.html";
-            currentChoices = allParts.shirts;
-            break;
-        case "Avatar Pants":
-            link = "../Exercise5/avatarSelection.html";
-            currentChoices = allParts.pants;
-            break;
-    }
-    showSelectableParts(currentChoices);
-    if (sessionStorage) {
-        alreadyChosen();
-    }
+    getJSON("https://sturmsee.github.io/GIS-SoSe-2021/Chapter2/Exercise5/scripts/data.json").then(function () {
+        allParts = JSON.parse(responseJSON);
+        console.log(allParts);
+        switch (document.title) {
+            case "Avatar Face":
+                link = "../Exercise5/avatarSubpage.html";
+                currentChoices = allParts.faces;
+                break;
+            case "Avatar Shirt":
+                link = "../Exercise5/avatarSubpage2.html";
+                currentChoices = allParts.shirts;
+                break;
+            case "Avatar Pants":
+                link = "../Exercise5/avatarSelection.html";
+                currentChoices = allParts.pants;
+                break;
+        }
+        showSelectableParts(currentChoices);
+        if (sessionStorage) {
+            alreadyChosen();
+        }
+    });
 })(Exercise2_5 || (Exercise2_5 = {}));
 //# sourceMappingURL=avatarGen.js.map

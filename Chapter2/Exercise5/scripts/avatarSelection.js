@@ -28,14 +28,16 @@ var Exercise2_5;
         allSelected.appendChild(createSelected(pants));
     }
     async function answer(_url) {
+        // tslint:disable-next-line: no-any
         let query = new URLSearchParams(sessionStorage);
         _url = _url + "?" + query.toString();
         let response = await fetch(_url);
         serverResponse = await response.json();
     }
-    answer("https://gis-communication.herokuapp.com/");
-    showSelectedParts();
-    console.log(face, shirt, pants);
-    sessionStorage.clear();
+    answer("https://gis-communication.herokuapp.com/").then(function () {
+        showSelectedParts();
+        console.log(face, shirt, pants);
+        sessionStorage.clear();
+    });
 })(Exercise2_5 || (Exercise2_5 = {}));
 //# sourceMappingURL=avatarSelection.js.map

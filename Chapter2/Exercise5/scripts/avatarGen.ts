@@ -24,30 +24,7 @@ namespace Exercise2_5 {
     async function getJSON(_url: RequestInfo): Promise<void> {
         let response: Response = await fetch(_url);
         console.log("Response", response);
-        responseJSON = await response.json();
-        allParts = JSON.parse(responseJSON);
-        console.log(allParts);
-
-        switch (document.title) {
-            case "Avatar Face":
-                link = "../Exercise5/avatarSubpage.html";
-                currentChoices = allParts.faces;
-                break;
-            case "Avatar Shirt":
-                link = "../Exercise5/avatarSubpage2.html";
-                currentChoices = allParts.shirts;
-                break;
-            case "Avatar Pants":
-                link = "../Exercise5/avatarSelection.html";
-                currentChoices = allParts.pants;
-                break;
-        }
-        
-        showSelectableParts(currentChoices);
-        
-        if (sessionStorage) {
-        alreadyChosen();
-        }
+        responseJSON = await response.text();
     }
 
     function createChoices(_parts: AvatarPart): HTMLDivElement {
@@ -107,8 +84,30 @@ namespace Exercise2_5 {
         }
     }
 
+    getJSON("https://sturmsee.github.io/GIS-SoSe-2021/Chapter2/Exercise5/scripts/data.json").then ( function (): void {
+        allParts = JSON.parse(responseJSON);
+        console.log(allParts);
 
-    getJSON("https://github.com/Sturmsee/GIS-SoSe-2021/blob/main/Chapter2/Exercise5/scripts/data.json");
+        switch (document.title) {
+            case "Avatar Face":
+                link = "../Exercise5/avatarSubpage.html";
+                currentChoices = allParts.faces;
+                break;
+            case "Avatar Shirt":
+                link = "../Exercise5/avatarSubpage2.html";
+                currentChoices = allParts.shirts;
+                break;
+            case "Avatar Pants":
+                link = "../Exercise5/avatarSelection.html";
+                currentChoices = allParts.pants;
+                break;
+        }
+        showSelectableParts(currentChoices);
+        
+        if (sessionStorage) {
+            alreadyChosen();
+        }
+    });
 
-
+    
 }
