@@ -1,0 +1,21 @@
+{
+  "name": "gissose2021-nils",
+  "version": "1.0.0",
+  "description": "package for heroku",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Chapter3/Exercise1/scripts/serverScript.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sturmsee/GIS-SoSe-2021.git"
+  },
+  "author": "Nils Schiffmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sturmsee/GIS-SoSe-2021/issues"
+  },
+  "homepage": "https://github.com/Sturmsee/GIS-SoSe-2021#readme"
+}
