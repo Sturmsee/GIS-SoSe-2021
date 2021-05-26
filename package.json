@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "start": "node https://github.com/Sturmsee/GIS-SoSe-2021/Chapter3/Exercise1/scripts/serverScript.js"
+    "start": "node Chapter3/Exercise1/scripts/serverScript.js"
   },
   "repository": {
     "type": "git",
