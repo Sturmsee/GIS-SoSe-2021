@@ -6,15 +6,15 @@ namespace P_3_1Server {
     button.addEventListener("click", subEvent);
 
     function subEvent(_e: Event): void {
-        submitting();
+        submitting(url);
     }
 
-    async function submitting(): Promise<void> {
+    async function submitting(_url: string): Promise<void> {
         formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
-        url += "?" + query.toString();
-        let response: Response = await fetch(url, { method: "get" });
+        _url += "?" + query.toString();
+        let response: Response = await fetch(_url, { method: "get" });
         let responseServer: string = await response.text();
         console.log("Antwort des Servers: " + responseServer);
 
