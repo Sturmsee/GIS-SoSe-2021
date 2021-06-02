@@ -9,7 +9,7 @@ var P_3_1Server;
     //Checking the Port of the Communication
     if (!port)
         //Setting the Port to 8100 if it isn't
-        port = 5500;
+        port = 8100;
     //Creating the Server
     let server = Http.createServer();
     //Setting EventListener for possible requests and communication

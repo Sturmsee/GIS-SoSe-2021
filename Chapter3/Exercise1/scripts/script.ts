@@ -2,8 +2,8 @@ namespace P_3_1Server {
     let formData: FormData;
     let url: string = "https://gissose2021-nils.herokuapp.com";
     let div: HTMLDivElement = <HTMLDivElement> document.getElementById("serverOutput");
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submitButton");
-    button.addEventListener("click", subEvent);
+    let subButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submitButton");
+    subButton.addEventListener("click", subEvent);
 
     function subEvent(_e: Event): void {
         submitting(url);

@@ -4,17 +4,17 @@ var P_3_1Server;
     let formData;
     let url = "https://gissose2021-nils.herokuapp.com";
     let div = document.getElementById("serverOutput");
-    let button = document.getElementById("submitButton");
-    button.addEventListener("click", subEvent);
+    let subButton = document.getElementById("submitButton");
+    subButton.addEventListener("click", subEvent);
     function subEvent(_e) {
-        submitting();
+        submitting(url);
     }
-    async function submitting() {
+    async function submitting(_url) {
         formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
-        url += "?" + query.toString();
-        let response = await fetch(url, { method: "get" });
+        _url += "?" + query.toString();
+        let response = await fetch(_url, { method: "get" });
         let responseServer = await response.text();
         console.log("Antwort des Servers: " + responseServer);
         serverAnswer(responseServer);
