@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet.css">
     <title>Sending Form Data</title>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <div class=navbar>
@@ -24,8 +24,8 @@
     <div id=registration>
         <form method="GET" action="https://gissose2021-nils.herokuapp.com">
             <label>Please enter your email and name here!</label>
-            <input type="email" name="email" value="EMAIL">
-            <input type="text" name="name" value="Your Name">
+            <input type="email" name="email" placeholder="EMAIL">
+            <input type="text" name="name" placeholder="YOUR NAME">
             <button id="submitButton" type="button" name="submit">SEND</button>
         </form>
     </div>
