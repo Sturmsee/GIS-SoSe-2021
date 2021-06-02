@@ -1,10 +1,13 @@
 namespace P_3_1Server {
     let formData: FormData;
-    let url: string = "https://gissose2021-nils.herokuapp.com/";
-    let div: HTMLDivElement = <HTMLDivElement> document.getElementById("registration");
-    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submit");
-    button.addEventListener("click", submitting);
+    let url: string = "https://gissose2021-nils.herokuapp.com";
+    let div: HTMLDivElement = <HTMLDivElement> document.getElementById("serverOutput");
+    let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submitButton");
+    button.addEventListener("click", subEvent);
 
+    function subEvent(_e: Event): void {
+        submitting();
+    }
 
     async function submitting(): Promise<void> {
         formData = new FormData(document.forms[0]);
@@ -19,10 +22,9 @@ namespace P_3_1Server {
     }
 
     function serverAnswer(_answer: string): void {
-        let answerElement: HTMLHeadingElement = document.createElement("h3");
 
+        let answerElement: HTMLHeadingElement = document.createElement("h2");
         answerElement.innerText = "Antwort des Servers: " + _answer;
-
         div.appendChild(answerElement);
     }
 }

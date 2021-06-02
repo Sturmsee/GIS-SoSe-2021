@@ -2,10 +2,13 @@
 var P_3_1Server;
 (function (P_3_1Server) {
     let formData;
-    let url = "https://gissose2021-nils.herokuapp.com/";
-    let div = document.getElementById("registration");
-    let button = document.getElementById("submit");
-    button.addEventListener("click", submitting);
+    let url = "https://gissose2021-nils.herokuapp.com";
+    let div = document.getElementById("serverOutput");
+    let button = document.getElementById("submitButton");
+    button.addEventListener("click", subEvent);
+    function subEvent(_e) {
+        submitting();
+    }
     async function submitting() {
         formData = new FormData(document.forms[0]);
         // tslint:disable-next-line: no-any
@@ -17,7 +20,7 @@ var P_3_1Server;
         serverAnswer(responseServer);
     }
     function serverAnswer(_answer) {
-        let answerElement = document.createElement("h3");
+        let answerElement = document.createElement("h2");
         answerElement.innerText = "Antwort des Servers: " + _answer;
         div.appendChild(answerElement);
     }

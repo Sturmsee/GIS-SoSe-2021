@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet.css">
     <title>Sending Form Data</title>
-    <script src="scripts/script.ts"></script>
+    <script src="scripts/script.js"></script>
 </head>
 <body>
     <div class=navbar>
@@ -22,12 +22,15 @@
         <h2>Your provider of edgy products and content</h2>
     </div>
     <div id=registration>
-        <form method="POST" action="https://gissose2021-nils.herokuapp.com">
-            <label>Please enter your email and password here!</label>
+        <form method="GET" action="https://gissose2021-nils.herokuapp.com">
+            <label>Please enter your email and name here!</label>
             <input type="email" name="email" value="EMAIL">
-            <input type="password" name="password" value="PASSWORD">
-            <button id="submit" type="button" name="submit">SEND</button>
+            <input type="text" name="name" value="Your Name">
+            <button id="submitButton" type="button" name="submit">SEND</button>
         </form>
+    </div>
+    <div id="serverOutput">
+
     </div>
 </div>
 </body>
