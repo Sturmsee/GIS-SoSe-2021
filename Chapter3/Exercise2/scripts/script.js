@@ -4,19 +4,10 @@ var Exercise3_2;
     let formData;
     let url = "https://gissose2021-nils.herokuapp.com";
     let div = document.getElementById("serverOutput");
-    let isJSON = true;
     let htmlButton = document.getElementById("submitHTML");
-    htmlButton.addEventListener("click", subEvent);
+    htmlButton.addEventListener("click", submittingHTML);
     let jsonButton = document.getElementById("submitJSON");
-    jsonButton.addEventListener("click", subEvent);
-    function subEvent(_e) {
-        if (isJSON) {
-            submittingJSON();
-        }
-        else {
-            submittingHTML();
-        }
-    }
+    jsonButton.addEventListener("click", submittingJSON);
     async function submittingHTML() {
         let _url = url;
         formData = new FormData(document.forms[0]);
