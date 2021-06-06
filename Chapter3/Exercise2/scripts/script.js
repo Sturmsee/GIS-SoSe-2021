@@ -31,40 +31,21 @@ var Exercise3_2;
         serverAnswer(responseServer, true);
     }
     function serverAnswer(_answer, _isJSON) {
-        let email = "";
-        let name = "";
-        let city = "";
         if (_isJSON) {
             console.log(JSON.parse(_answer));
         }
         else {
-            for (let i = 0; i <= _answer.length; i++) {
-                if (email == "") {
-                    while (_answer.charAt(i) != ";") {
-                        email += _answer.charAt(i);
-                    }
-                }
-                else if (name == "" || email != "") {
-                    while (_answer.charAt(i) != ";") {
-                        name += _answer.charAt(i);
-                    }
-                }
-                else if (city == "" || name != "") {
-                    while (_answer.charAt(i) != ";" || i <= _answer.length) {
-                        city += _answer.charAt(i);
-                    }
-                }
-            }
+            let htmlAnswer = _answer.split(";");
+            let answerEmail = document.createElement("p");
+            let answerName = document.createElement("p");
+            let answerCity = document.createElement("p");
+            answerEmail.innerText = "Your Email: " + htmlAnswer[0];
+            answerName.innerText = "Your Name: " + htmlAnswer[1];
+            answerCity.innerText = "Your City: " + htmlAnswer[2];
+            div.appendChild(answerEmail);
+            div.appendChild(answerName);
+            div.appendChild(answerCity);
         }
-        let answerEmail = document.createElement("p");
-        let answerName = document.createElement("p");
-        let answerCity = document.createElement("p");
-        answerEmail.innerText = "Your Email: " + email;
-        answerName.innerText = "Your Name: " + name;
-        answerCity.innerText = "Your City: " + city;
-        div.appendChild(answerEmail);
-        div.appendChild(answerName);
-        div.appendChild(answerCity);
     }
 })(Exercise3_2 || (Exercise3_2 = {}));
 //# sourceMappingURL=script.js.map

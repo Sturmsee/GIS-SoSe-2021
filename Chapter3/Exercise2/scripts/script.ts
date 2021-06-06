@@ -44,43 +44,27 @@ namespace Exercise3_2 {
 
     function serverAnswer (_answer: string, _isJSON: boolean): void {
 
-        let email: string = "";
-        let name: string = "";
-        let city: string = "";
-
         if (_isJSON) {
             console.log(JSON.parse(_answer));
         }
         else {
-            for (let i: number = 0; i <= _answer.length; i++) {
-                if (email == "") {
-                    while (_answer.charAt(i) != ";") {
-                        email += _answer.charAt(i);
-                    }
-                }
-                else if (name == "" || email != "") {
-                    while (_answer.charAt(i) != ";") {
-                        name += _answer.charAt(i);
-                    }
-                }
-                else if (city == "" || name != "") {
-                    while (_answer.charAt(i) != ";" || i <= _answer.length) {
-                        city += _answer.charAt(i);
-                    }
-                }
-            }    
+            
+            let htmlAnswer: string[] = _answer.split(";");
+
+
+            let answerEmail: HTMLHeadingElement = document.createElement("p");
+            let answerName: HTMLHeadingElement = document.createElement("p");
+            let answerCity: HTMLHeadingElement = document.createElement("p");
+        
+            answerEmail.innerText = "Your Email: " + htmlAnswer[0];
+            answerName.innerText = "Your Name: " + htmlAnswer[1];
+            answerCity.innerText = "Your City: " + htmlAnswer[2];
+
+            div.appendChild(answerEmail);
+            div.appendChild(answerName); 
+            div.appendChild(answerCity);      
         }
 
-        let answerEmail: HTMLHeadingElement = document.createElement("p");
-        let answerName: HTMLHeadingElement = document.createElement("p");
-        let answerCity: HTMLHeadingElement = document.createElement("p");
-        
-        answerEmail.innerText = "Your Email: " + email;
-        answerName.innerText = "Your Name: " + name;
-        answerCity.innerText = "Your City: " + city;
-
-        div.appendChild(answerEmail);
-        div.appendChild(answerName); 
-        div.appendChild(answerCity);  
+          
     }
 }

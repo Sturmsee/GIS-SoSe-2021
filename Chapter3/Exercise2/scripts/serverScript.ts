@@ -32,7 +32,7 @@ export namespace Exercise3_2 {
 
         let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
         let qdata = q.query;
-        let dataOut: Data = {email: qdata.email.toString(), name: qdata.name.toString(), city: qdata.city.toString()}
+        let dataOut: Data = {email: qdata.email.toString(), name: qdata.name.toString(), city: qdata.city.toString()};
         let responseText: string = "";
 
         if (q.pathname == "/html") {
