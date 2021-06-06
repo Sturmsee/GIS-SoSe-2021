@@ -4,15 +4,21 @@ namespace Exercise3_2 {
     let formData: FormData;
     let url: string = "https://gissose2021-nils.herokuapp.com";
     let div: HTMLDivElement = <HTMLDivElement> document.getElementById("serverOutput");
-
+    let isJSON: boolean = true;
 
 
     let htmlButton: HTMLButtonElement = <HTMLButtonElement> document.getElementById("submitHTML");
-    htmlButton.addEventListener("click", submittingHTML);
+    htmlButton.addEventListener("click", subEvent);
     let jsonButton: HTMLButtonElement = <HTMLButtonElement> document.getElementById("submitJSON");
-    jsonButton.addEventListener("click", submittingJSON);
+    jsonButton.addEventListener("click", subEvent);
 
-  
+    function subEvent(_e: Event): void {
+        if (isJSON) {
+            submittingJSON();
+        } else {
+            submittingHTML();
+        }
+    }
 
     async function submittingHTML(): Promise<void> {
 
@@ -44,13 +50,13 @@ namespace Exercise3_2 {
 
     }
 
-    function serverAnswer (_answer: string, isJSON: boolean): void {
+    function serverAnswer (_answer: string, _isJSON: boolean): void {
 
         let email: string = "";
         let name: string = "";
         let city: string = "";
 
-        if (isJSON) {
+        if (_isJSON) {
             console.log(JSON.parse(_answer));
         }
         else {

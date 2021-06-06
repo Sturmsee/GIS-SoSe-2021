@@ -4,10 +4,19 @@ var Exercise3_2;
     let formData;
     let url = "https://gissose2021-nils.herokuapp.com";
     let div = document.getElementById("serverOutput");
+    let isJSON = true;
     let htmlButton = document.getElementById("submitHTML");
-    htmlButton.addEventListener("click", submittingHTML);
+    htmlButton.addEventListener("click", subEvent);
     let jsonButton = document.getElementById("submitJSON");
-    jsonButton.addEventListener("click", submittingJSON);
+    jsonButton.addEventListener("click", subEvent);
+    function subEvent(_e) {
+        if (isJSON) {
+            submittingJSON();
+        }
+        else {
+            submittingHTML();
+        }
+    }
     async function submittingHTML() {
         let _url = url;
         formData = new FormData(document.forms[0]);
@@ -30,11 +39,11 @@ var Exercise3_2;
         console.log("the server responded: " + responseServer);
         serverAnswer(responseServer, true);
     }
-    function serverAnswer(_answer, isJSON) {
+    function serverAnswer(_answer, _isJSON) {
         let email = "";
         let name = "";
         let city = "";
-        if (isJSON) {
+        if (_isJSON) {
             console.log(JSON.parse(_answer));
         }
         else {
