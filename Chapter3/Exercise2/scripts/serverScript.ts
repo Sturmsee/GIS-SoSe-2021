@@ -14,17 +14,11 @@ export namespace Exercise3_2 {
     server.addListener("listening", handleListen);
     server.listen(port);
 
-    let adresse: string = 'https://gissose2021-nils.herokuapp.com';
-    let q = url.parse(adresse, true);
-
-    
-    console.log(q.host);
-    console.log(q.pathname);
-    console.log(q.search);
-
-    
-    var qdata = q.query;
-    console.log(qdata.monat);
+    interface Data {
+        email: string;
+        name: string;
+        city: string;
+    }
 
     function handleListen(): void {
         console.log("Listening");
@@ -36,7 +30,20 @@ export namespace Exercise3_2 {
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
 
-        _response.write(_request.url);
+        let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
+        let qdata = q.query;
+        let dataOut: Data = {email: qdata.email.toString(), name: qdata.name.toString(), city: qdata.city.toString()}
+        let responseText: string = "";
+
+        if (q.pathname == "/html") {
+            responseText = qdata.email + ";" + qdata.name + ";" + qdata.city;
+        }
+        else if (q.pathname == "/json") {
+            responseText = JSON.stringify(dataOut);
+        }
+        
+
+        _response.write(responseText);
 
         _response.end();
     }
