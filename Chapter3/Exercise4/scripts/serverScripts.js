@@ -48,10 +48,12 @@ var Exercise3_4s;
             students.insert(student);
         }
         else if (q.pathname == "/request") {
-            if (students.find(qdata))
+            if (students.find(qdata)) {
                 responseText = JSON.stringify(students.find(qdata));
-            else
+            }
+            else {
                 responseText = "There is no such entry";
+            }
         }
         _response.write(responseText);
         _response.end();
