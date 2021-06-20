@@ -3,11 +3,11 @@ namespace Exercise3_4 {
 
     let formData: FormData;
     let url: string = "https://gissose2021-nils.herokuapp.com";
-    let div: HTMLDivElement = <HTMLDivElement>document.getElementById("serverOutput");
+    let div: HTMLDivElement = <HTMLDivElement> document.getElementById("serverOutput");
 
     let send: HTMLButtonElement = <HTMLButtonElement> document.getElementById("sendToDB");
     send.addEventListener("click", sendDATA);
-    let request: HTMLButtonElement = <HTMLButtonElement>document.getElementById("request");
+    let request: HTMLButtonElement = <HTMLButtonElement> document.getElementById("request");
     request.addEventListener("click", requestDATA);
 
     async function sendDATA(): Promise<void> {

@@ -16,12 +16,12 @@ export namespace Exercise3_4 {
     
     function startServer(_port: number | string) {
 
-    console.log("Starting server");
+        console.log("Starting server");
 
-    let server: Http.Server = Http.createServer();
-    server.addListener("request", handleRequest);
-    server.addListener("listening", handleListen);
-    server.listen(_port);
+        let server: Http.Server = Http.createServer();
+        server.addListener("request", handleRequest);
+        server.addListener("listening", handleListen);
+        server.listen(_port);
     }    
 
     interface Data {
