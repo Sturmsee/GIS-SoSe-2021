@@ -20,7 +20,7 @@ export namespace Exercise3_4s {
     let server: Http.Server = Http.createServer();
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
-    server.listen(port);
+    server.listen(_port);
     }    
 
     interface Data {

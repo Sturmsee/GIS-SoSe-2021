@@ -18,7 +18,7 @@ var Exercise3_4s;
         let server = Http.createServer();
         server.addListener("request", handleRequest);
         server.addListener("listening", handleListen);
-        server.listen(port);
+        server.listen(_port);
     }
     function handleListen() {
         console.log("Listening");
