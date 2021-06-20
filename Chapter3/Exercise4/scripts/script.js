@@ -30,6 +30,9 @@ var Exercise3_4;
         let response = await fetch(_url, { method: "get" });
         let responseServer = await response.text();
         console.log("the server responded: " + responseServer);
+        let p = document.createElement("p");
+        p.innerText = responseServer;
+        div.appendChild(p);
     }
 })(Exercise3_4 || (Exercise3_4 = {}));
 //# sourceMappingURL=script.js.map

@@ -37,5 +37,8 @@ namespace Exercise3_4 {
         let responseServer: string = await response.text();
         console.log("the server responded: " + responseServer);
         
+        let p: HTMLParagraphElement = document.createElement("p");
+        p.innerText = responseServer;
+        div.appendChild(p);
     }
 }
