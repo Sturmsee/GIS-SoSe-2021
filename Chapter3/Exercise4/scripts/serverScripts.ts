@@ -2,7 +2,8 @@ import * as Http from "http";
 import * as url from "url";
 import * as Mongo from "mongodb";
 
-export namespace Exercise3_4s {
+export namespace Exercise3_4 {
+    
     let students: Mongo.Collection;
     let port: number = Number(process.env.PORT);
     let dbUrl: string = "mongodb+srv://nils-hfu.7qqpl.mongodb.net/Test?retryWrites=true&w=majority";

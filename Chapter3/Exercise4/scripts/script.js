@@ -17,9 +17,7 @@ var Exercise3_4;
         let response = await fetch(_url, { method: "get" });
         let responseServer = await response.text();
         console.log("the server responded: " + responseServer);
-        let p = document.createElement("p");
-        p.innerText = responseServer;
-        div.appendChild(p);
+        serverAnswer(responseServer);
     }
     async function requestDATA() {
         let _url = url;
@@ -30,8 +28,11 @@ var Exercise3_4;
         let response = await fetch(_url, { method: "get" });
         let responseServer = await response.text();
         console.log("the server responded: " + responseServer);
+        serverAnswer(responseServer);
+    }
+    function serverAnswer(_answer) {
         let p = document.createElement("p");
-        p.innerText = responseServer;
+        p.innerText = _answer;
         div.appendChild(p);
     }
 })(Exercise3_4 || (Exercise3_4 = {}));

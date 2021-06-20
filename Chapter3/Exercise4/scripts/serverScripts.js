@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Exercise3_4s = void 0;
+exports.Exercise3_4 = void 0;
 const Http = require("http");
 const url = require("url");
 const Mongo = require("mongodb");
-var Exercise3_4s;
-(function (Exercise3_4s) {
+var Exercise3_4;
+(function (Exercise3_4) {
     let students;
     let port = Number(process.env.PORT);
     let dbUrl = "mongodb+srv://nils-hfu.7qqpl.mongodb.net/Test?retryWrites=true&w=majority";
@@ -58,5 +58,5 @@ var Exercise3_4s;
         _response.write(responseText);
         _response.end();
     }
-})(Exercise3_4s = exports.Exercise3_4s || (exports.Exercise3_4s = {}));
+})(Exercise3_4 = exports.Exercise3_4 || (exports.Exercise3_4 = {}));
 //# sourceMappingURL=serverScripts.js.map

@@ -21,9 +21,7 @@ namespace Exercise3_4 {
         let responseServer: string = await response.text();
         console.log("the server responded: " + responseServer);
 
-        let p: HTMLParagraphElement = document.createElement("p");
-        p.innerText = responseServer;
-        div.appendChild(p);
+        serverAnswer(responseServer);
     }
 
     async function requestDATA(): Promise<void> {
@@ -37,8 +35,12 @@ namespace Exercise3_4 {
         let responseServer: string = await response.text();
         console.log("the server responded: " + responseServer);
         
+        serverAnswer(responseServer);
+    }
+
+    function serverAnswer (_answer: string) {
         let p: HTMLParagraphElement = document.createElement("p");
-        p.innerText = responseServer;
+        p.innerText = _answer;
         div.appendChild(p);
     }
 }
