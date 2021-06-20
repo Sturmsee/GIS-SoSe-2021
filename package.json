@@ -11,7 +11,7 @@
     "@types/node": "^15.12.4"
   },
   "scripts": {
-    "start": "node Chapter3/Exercise3/scripts/serverScript.js"
+    "start": "node Chapter3/Exercise4/scripts/serverScript.js"
   },
   "repository": {
     "type": "git",

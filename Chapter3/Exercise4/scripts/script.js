@@ -1,6 +1,6 @@
 "use strict";
-var Exercise3_3;
-(function (Exercise3_3) {
+var Exercise3_4;
+(function (Exercise3_4) {
     let formData;
     let url = "https://gissose2021-nils.herokuapp.com";
     let div = document.getElementById("serverOutput");
@@ -31,5 +31,5 @@ var Exercise3_3;
         let responseServer = await response.text();
         console.log("the server responded: " + responseServer);
     }
-})(Exercise3_3 || (Exercise3_3 = {}));
+})(Exercise3_4 || (Exercise3_4 = {}));
 //# sourceMappingURL=script.js.map

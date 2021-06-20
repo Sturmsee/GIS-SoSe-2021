@@ -1,5 +1,5 @@
 
-namespace Exercise3_3 {
+namespace Exercise3_4 {
 
     let formData: FormData;
     let url: string = "https://gissose2021-nils.herokuapp.com";
