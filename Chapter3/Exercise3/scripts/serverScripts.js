@@ -44,7 +44,7 @@ var Exercise3_3;
             else {
                 responseText = "Submission of data was a success";
             }
-            let student = { firstname: qdata.firstname.toString(), lastname: qdata.lastname.toString(), regID: qdata.registrationnumber.toString() };
+            let student = { name: qdata.name.toString(), firstname: qdata.firstname.toString(), registration: qdata.registrationnumber.toString() };
             students.insert(student);
         }
         else if (q.pathname == "/request") {

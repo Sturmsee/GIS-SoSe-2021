@@ -24,9 +24,9 @@ export namespace Exercise3_3 {
     }    
 
     interface Data {
+        name: string;
         firstname: string;
-        lastname: string;
-        regID: string;
+        registration: string;
     }
 
     function handleListen(): void {
@@ -60,7 +60,7 @@ export namespace Exercise3_3 {
                 responseText = "Submission of data was a success";
             }
             
-            let student: Data = {firstname: qdata.firstname.toString(), lastname: qdata.lastname.toString(), regID: qdata.registrationnumber.toString()}
+            let student: Data = {name: qdata.name.toString(), firstname: qdata.firstname.toString(), registration: qdata.registrationnumber.toString()}
             students.insert(student);
         }
         else if (q.pathname == "/request") {
