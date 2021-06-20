@@ -65,6 +65,10 @@ for (let student of studentInfoArray) {
     console.log(showInfo(student));
 }
 class Student {
+    firstName;
+    lastName;
+    age;
+    course;
     constructor(firstName, lastName, age, course) {
         this.firstName = firstName;
         this.lastName = lastName;

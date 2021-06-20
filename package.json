@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "package for heroku",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "@types/mongodb": "^3.6.18",
+    "mongodb": "^3.6.9"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.4"
+  },
   "scripts": {
-    "start": "node Chapter3/Exercise2/scripts/serverScript.js"
+    "start": "node Chapter3/Exercise3/scripts/serverScript.js"
   },
   "repository": {
     "type": "git",

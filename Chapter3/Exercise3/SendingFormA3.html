@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./stylesheet.css">
-    <title>Sending Form Data</title>
+    <title>Dark Intents</title>
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
     <div class=navbar>
         <a  href="../Exercise1/SendingForm.html">Exercise 1</a>
-        <a class="active" href="./SendingFormA2.html">Exercise 2</a>
-        <a href="../Exercise3/SendingFormA3.html">Exercise 3</a>
+        <a  href="../Exercise2/SendingFormA2.html">Exercise 2</a>
+        <a class="active" href="./SendingFormA3.html">Exercise 3</a>
     </div>
     <div class="main">
-    <div id=headline>
+    <div id="headline">
         <h1>Welcome to Dark Intents</h1>
         <hr>
         <h2>Your provider of edgy products and content</h2>
     </div>
-    <div id=registration>
+    <div id="communicate">
         <form method="GET" action="https://gissose2021-nils.herokuapp.com">
-            <label>Please enter your email and name and address here!</label>
-            <input type="email" name="email" placeholder="EMAIL">
-            <input type="text" name="name" placeholder="YOUR NAME">
-            <input type="text" name="city" placeholder="CITY"> <br>
-            <button id="submitHTML" type="button" name="submitHTML">SEND AS HTML</button>
-            <button id="submitJSON" type="button" name="submitJSON">SEND AS JSON</button>
+            <label>Please enter your name and registrationnumber here!</label>
+            <input type="email" name="firstname" placeholder="JOHN">
+            <input type="text" name="lastname" placeholder="DOE">
+            <input type="text" name="registrationnumber" placeholder="091101"> <br>
+            <button id="sendToDB" type="button" name="sendToDB">SEND TO DB</button>
+            <button id="request" type="button" name="request">REQUEST DATA</button>
         </form>
     </div>
     <div id="serverOutput">
