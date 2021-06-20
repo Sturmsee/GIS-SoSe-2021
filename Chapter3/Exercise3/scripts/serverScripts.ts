@@ -5,7 +5,7 @@ import * as Mongo from "mongodb";
 export namespace Exercise3_3 {
     let students: Mongo.Collection;
     let port: number = Number(process.env.PORT);
-    let dbUrl: string = "mongodb://nils-hfu.7qqpl.mongodb.net/Test";
+    let dbUrl: string = "mongodb+srv://nils-hfu.7qqpl.mongodb.net/Test";
     
     if (!port)
         port = 8100;
@@ -24,20 +24,19 @@ export namespace Exercise3_3 {
     }    
 
     interface Data {
-        name: string;
-        firstname: string;
-        registration: string;
+        [type: string]: string | string[];
     }
 
     function handleListen(): void {
         console.log("Listening");
     }
 
-    async function connectMongo(_uri: string) {
+    async function connectMongo(_uri: string): Promise<void> {
         let options: Mongo.MongoClientOptions = {useNewUrlParser: true, useUnifiedTopology: true};
         let mongoClient: Mongo.MongoClient = new Mongo.MongoClient(_uri, options);
         await mongoClient.connect();
         students = mongoClient.db("Test").collection("Students")
+        console.log("Database connection ", students != undefined);
     }
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
@@ -49,7 +48,6 @@ export namespace Exercise3_3 {
 
         let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
         let qdata = q.query;
-        let dataOut: Data;
         let responseText: string = "";
 
         if (q.pathname == "/send") {
@@ -64,7 +62,10 @@ export namespace Exercise3_3 {
             students.insert(student);
         }
         else if (q.pathname == "/request") {
-            responseText = JSON.stringify(dataOut);
+            if(students.find(qdata))
+                responseText = JSON.stringify(students.find(qdata));
+            else
+                responseText = "There is no such entry";
         }
         
         _response.write(responseText);

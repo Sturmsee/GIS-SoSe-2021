@@ -8,7 +8,7 @@ var Exercise3_3;
 (function (Exercise3_3) {
     let students;
     let port = Number(process.env.PORT);
-    let dbUrl = "mongodb://nils-hfu.7qqpl.mongodb.net/Test";
+    let dbUrl = "mongodb+srv://nils-hfu.7qqpl.mongodb.net/Test";
     if (!port)
         port = 8100;
     startServer(port);
@@ -28,6 +28,7 @@ var Exercise3_3;
         let mongoClient = new Mongo.MongoClient(_uri, options);
         await mongoClient.connect();
         students = mongoClient.db("Test").collection("Students");
+        console.log("Database connection ", students != undefined);
     }
     function handleRequest(_request, _response) {
         console.log("I hear voices!");
@@ -35,7 +36,6 @@ var Exercise3_3;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         let q = url.parse(_request.url, true);
         let qdata = q.query;
-        let dataOut;
         let responseText = "";
         if (q.pathname == "/send") {
             if (students != undefined) {
@@ -48,7 +48,10 @@ var Exercise3_3;
             students.insert(student);
         }
         else if (q.pathname == "/request") {
-            responseText = JSON.stringify(dataOut);
+            if (students.find(qdata))
+                responseText = JSON.stringify(students.find(qdata));
+            else
+                responseText = "There is no such entry";
         }
         _response.write(responseText);
         _response.end();
